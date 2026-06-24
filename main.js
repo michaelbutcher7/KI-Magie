@@ -22,6 +22,39 @@
     if (path === "" && (target === "index.html" || target === "../index.html")) a.classList.add("active");
   });
 
+  // ---------- Dropdown Active Propagation ----------
+  // If a link inside a dropdown is active, mark its trigger as active too.
+  document.querySelectorAll(".nav-dropdown a.active").forEach(function (link) {
+    const group = link.closest(".nav-group");
+    if (!group) return;
+    const trigger = group.querySelector(".nav-trigger");
+    if (trigger) trigger.classList.add("has-active");
+  });
+
+  // ---------- Dropdown Toggle (click to open, esc to close) ----------
+  const triggers = document.querySelectorAll(".nav-trigger");
+  triggers.forEach(function (btn) {
+    btn.addEventListener("click", function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      const expanded = btn.getAttribute("aria-expanded") === "true";
+      triggers.forEach(function (other) { other.setAttribute("aria-expanded", "false"); });
+      btn.setAttribute("aria-expanded", expanded ? "false" : "true");
+    });
+  });
+  // Close on outside click
+  document.addEventListener("click", function (e) {
+    if (!e.target.closest(".nav-group")) {
+      triggers.forEach(function (btn) { btn.setAttribute("aria-expanded", "false"); });
+    }
+  });
+  // Close on Escape
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") {
+      triggers.forEach(function (btn) { btn.setAttribute("aria-expanded", "false"); });
+    }
+  });
+
   // ---------- Lernideen Tabs ----------
   document.querySelectorAll(".lernideen").forEach(function (root) {
     const buttons = root.querySelectorAll(".tab-btn");
