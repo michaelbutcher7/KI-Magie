@@ -1,0 +1,1530 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lernideen · Bildung | KI-Magie</title>
+  <meta name="description" content="Gesammelte Lernideen mit KI für den Bildungs- und Schulkontext - fertige Prompts und Vorlagen für Unterricht und Lernende." />
+  <meta name="theme-color" content="#097EB5" />
+  <meta name="author" content="Michael Fleischer" />
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="../assets/favicon.svg" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Lernideen · Bildung | KI-Magie" />
+  <meta property="og:description" content="Gesammelte Lernideen mit KI für den Bildungs- und Schulkontext." />
+  <meta property="og:image" content="../assets/og-image.svg" />
+  <meta property="og:locale" content="de_DE" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Lernideen · Bildung | KI-Magie" />
+  <meta name="twitter:description" content="Gesammelte Lernideen mit KI für den Bildungs- und Schulkontext." />
+  <meta name="twitter:image" content="../assets/og-image.svg" />
+  <style id="ki-magie-inline">
+:root {
+  --blue-50:#ECF6FC; --blue-100:#D2ECF7; --blue-200:#A6D8ED; --blue-300:#6FC0E1;
+  --blue-400:#2FA1D2; --blue-500:#097EB5; --blue-600:#086B9C; --blue-700:#08567C;
+  --blue-800:#0A4360; --blue-900:#0B3347;
+  --teal-50:#E8F8F5; --teal-100:#C7EFE8; --teal-200:#8FDFD2; --teal-300:#4FCBB8;
+  --teal-400:#1FB6A0; --teal-500:#109684; --teal-600:#0C7A6C; --teal-700:#0A5F55;
+  --coral-50:#FDEEE8; --coral-100:#FAD7C8; --coral-200:#F6B59A; --coral-300:#F28D66;
+  --coral-400:#EE6F41; --coral-500:#DC5A2C; --coral-600:#B9461F;
+  --white:#FFFFFF;
+  --slate-50:#F6F9FB; --slate-100:#EDF2F6; --slate-200:#DCE5EC; --slate-300:#C2D0DB;
+  --slate-400:#93A6B4; --slate-500:#687C8B; --slate-600:#4A5C6A; --slate-700:#334451;
+  --slate-800:#1C2C38; --slate-900:#0C1A24;
+  --success-50:#E7F6EE; --success-500:#1F9D6B;
+  --warning-50:#FCF3E2; --warning-500:#E8A317;
+  --danger-50:#FBEAEA;  --danger-500:#D64545;
+  --brand:var(--blue-500); --brand-hover:var(--blue-600); --brand-active:var(--blue-700);
+  --brand-subtle:var(--blue-50); --brand-ink:var(--blue-800);
+  --secondary:var(--teal-400); --secondary-ink:var(--teal-700);
+  --accent:var(--coral-400); --accent-hover:var(--coral-500);
+  --text-strong:var(--slate-900); --text-body:var(--slate-700);
+  --text-muted:var(--slate-500); --text-faint:var(--slate-400);
+  --text-on-brand:var(--white); --text-link:var(--blue-600);
+  --surface-page:var(--white); --surface-sunken:var(--slate-50);
+  --surface-card:var(--white); --surface-inverse:var(--slate-900);
+  --surface-brand:var(--blue-500);
+  --border-subtle:var(--slate-200); --border-default:var(--slate-300);
+  --border-strong:var(--slate-400); --border-brand:var(--blue-500);
+  --ring:color-mix(in srgb, var(--blue-500) 45%, transparent);
+  --color-primary:var(--blue-500); --color-primary-dark:var(--blue-700);
+  --color-primary-light:var(--blue-400);
+  --color-accent:var(--coral-400); --color-accent-dark:var(--coral-500);
+  --color-secondary:var(--teal-400); --color-secondary-light:var(--teal-300);
+  --color-bg:var(--slate-50); --color-surface:var(--white);
+  --color-surface-alt:var(--slate-100);
+  --color-text:var(--slate-700); --color-text-muted:var(--slate-500);
+  --color-border:var(--slate-200);
+  --font-display:"Aptos Display","Aptos",system-ui,-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;
+  --font-sans:"Aptos",system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  --font-mono:"Aptos Mono","Cascadia Mono",ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+  --fw-regular:400; --fw-medium:500; --fw-semibold:600; --fw-bold:700; --fw-extra:800;
+  --text-xs:0.75rem; --text-sm:0.875rem; --text-base:1rem; --text-md:1.125rem;
+  --text-lg:1.375rem; --text-xl:1.75rem; --text-2xl:2.25rem; --text-3xl:2.875rem;
+  --text-4xl:3.75rem; --text-5xl:4.75rem;
+  --leading-tight:1.08; --leading-snug:1.25; --leading-normal:1.5; --leading-relaxed:1.65;
+  --tracking-tight:-0.02em; --tracking-snug:-0.01em; --tracking-normal:0;
+  --tracking-wide:0.02em; --tracking-caps:0.08em;
+  --space-1:0.25rem; --space-2:0.5rem; --space-3:0.75rem; --space-4:1rem;
+  --space-5:1.5rem; --space-6:2rem; --space-7:2.5rem; --space-8:3rem;
+  --space-10:4rem; --space-12:5rem; --space-16:8rem;
+  --radius-xs:4px; --radius-sm:6px; --radius-md:10px; --radius-lg:16px;
+  --radius-xl:24px; --radius-pill:999px;
+  --shadow-xs:0 1px 2px rgba(12,26,36,0.06);
+  --shadow-sm:0 1px 3px rgba(12,26,36,0.08),0 1px 2px rgba(12,26,36,0.04);
+  --shadow-md:0 4px 12px rgba(12,26,36,0.08),0 2px 4px rgba(12,26,36,0.05);
+  --shadow-lg:0 12px 28px rgba(12,26,36,0.12),0 4px 8px rgba(12,26,36,0.06);
+  --shadow-xl:0 24px 56px rgba(12,26,36,0.16);
+  --shadow-brand:0 10px 28px rgba(9,126,181,0.28);
+  --container:1200px; --container-narrow:760px;
+  --ease-out:cubic-bezier(0.22,1,0.36,1);
+  --ease-in-out:cubic-bezier(0.65,0,0.35,1);
+  --dur-fast:120ms; --dur-base:200ms; --dur-slow:360ms;
+}
+*,*::before,*::after { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body {
+  margin:0;
+  font-family:var(--font-sans);
+  font-size:var(--text-base);
+  line-height:var(--leading-normal);
+  color:var(--text-body);
+  background:var(--surface-page);
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+img { max-width:100%; height:auto; display:block; }
+a {
+  color:var(--text-link);
+  text-decoration:none;
+  transition:color var(--dur-fast) var(--ease-out);
+}
+a:hover { color:var(--brand-active); }
+::selection { background:var(--blue-200); color:var(--slate-900); }
+h1,h2,h3,h4 {
+  font-family:var(--font-display);
+  color:var(--text-strong);
+  font-weight:var(--fw-semibold);
+  letter-spacing:var(--tracking-tight);
+  line-height:var(--leading-tight);
+  margin:0;
+  text-wrap:balance;
+}
+h1 { font-size:clamp(2.25rem,4.5vw,3.75rem); font-weight:var(--fw-bold); }
+h2 { font-size:clamp(1.5rem,2.6vw,2.25rem); }
+h3 { font-size:var(--text-lg); }
+h4 { font-size:var(--text-md); color:var(--brand-ink); }
+p { text-wrap:pretty; margin:0 0 var(--space-4); }
+.container { max-width:var(--container); margin:0 auto; padding:0 var(--space-5); }
+.eyebrow, .dse-eyebrow {
+  font-family:var(--font-mono);
+  font-size:var(--text-xs);
+  font-weight:var(--fw-medium);
+  letter-spacing:var(--tracking-caps);
+  text-transform:uppercase;
+  color:var(--brand);
+}
+.site-header {
+  position:sticky; top:0; z-index:100;
+  background:rgba(255,255,255,0.92);
+  backdrop-filter:blur(10px) saturate(140%);
+  border-bottom:1px solid var(--border-subtle);
+}
+.site-header .container {
+  display:flex; align-items:center; justify-content:space-between;
+  height:72px;
+}
+.brand { display:flex; align-items:center; gap:0.7rem; text-decoration:none; }
+.brand-logo {
+  width:44px; height:44px;
+  border-radius:var(--radius-md);
+  background:linear-gradient(135deg,var(--blue-700),var(--blue-500) 55%,var(--teal-500));
+  display:grid; place-items:center;
+  color:#fff; font-weight:var(--fw-bold);
+  box-shadow:var(--shadow-sm);
+  position:relative; overflow:hidden;
+}
+.brand-logo::after {
+  content:""; position:absolute; inset:-50%;
+  background:radial-gradient(circle at 30% 30%,rgba(255,255,255,0.35),transparent 60%);
+}
+.brand-logo span {
+  position:relative; z-index:1;
+  font-family:var(--font-display);
+  font-size:1rem; letter-spacing:-0.02em;
+}
+.brand-name {
+  font-family:var(--font-display);
+  font-weight:var(--fw-bold);
+  color:var(--text-strong);
+  font-size:1.05rem;
+  letter-spacing:var(--tracking-snug);
+  line-height:1.15;
+}
+.brand-name small {
+  display:block;
+  font-family:var(--font-mono);
+  font-size:0.65rem;
+  font-weight:var(--fw-medium);
+  color:var(--text-muted);
+  letter-spacing:var(--tracking-caps);
+  text-transform:uppercase;
+  margin-top:2px;
+}
+.nav-toggle {
+  display:none;
+  background:none; border:0; cursor:pointer;
+  width:40px; height:40px;
+  border-radius:var(--radius-sm);
+  align-items:center; justify-content:center;
+}
+.nav-toggle span { display:block; width:22px; height:2px; background:var(--text-strong); position:relative; }
+.nav-toggle span::before,.nav-toggle span::after {
+  content:""; position:absolute; left:0; width:22px; height:2px; background:var(--text-strong);
+}
+.nav-toggle span::before { top:-7px; }
+.nav-toggle span::after  { top:7px; }
+.main-nav { display:flex; gap:var(--space-1); }
+.main-nav a {
+  color:var(--text-body);
+  font-weight:var(--fw-medium);
+  font-size:var(--text-sm);
+  padding:0.55rem 0.9rem;
+  border-radius:var(--radius-md);
+  transition:background var(--dur-fast) var(--ease-out), color var(--dur-fast) var(--ease-out);
+}
+.main-nav a:hover { background:var(--brand-subtle); color:var(--brand-ink); }
+.main-nav a.active { background:var(--brand); color:var(--white); }
+.nav-group { position:relative; display:inline-flex; }
+.nav-trigger {
+  background:none; border:0; cursor:pointer;
+  color:var(--text-body);
+  font-family:inherit;
+  font-weight:var(--fw-medium);
+  font-size:var(--text-sm);
+  padding:0.55rem 0.9rem;
+  border-radius:var(--radius-md);
+  display:inline-flex; align-items:center; gap:6px;
+  transition:background var(--dur-fast) var(--ease-out), color var(--dur-fast) var(--ease-out);
+}
+.nav-trigger:hover, .nav-trigger[aria-expanded="true"] {
+  background:var(--brand-subtle); color:var(--brand-ink);
+}
+.nav-trigger.has-active { background:var(--brand); color:var(--white); }
+.nav-trigger .chev {
+  display:inline-block;
+  transition:transform var(--dur-fast) var(--ease-out);
+  font-size:0.7em; opacity:0.7;
+}
+.nav-trigger[aria-expanded="true"] .chev { transform:rotate(180deg); }
+.nav-dropdown {
+  position:absolute; top:calc(100% + 6px); left:0;
+  min-width:200px;
+  background:var(--surface-card);
+  border:1px solid var(--border-subtle);
+  border-radius:var(--radius-md);
+  box-shadow:var(--shadow-lg);
+  padding:var(--space-2);
+  opacity:0; visibility:hidden;
+  transform:translateY(-4px);
+  transition:opacity var(--dur-fast) var(--ease-out),
+             transform var(--dur-fast) var(--ease-out),
+             visibility var(--dur-fast) var(--ease-out);
+  z-index:200;
+}
+.nav-group:hover > .nav-dropdown,
+.nav-group:focus-within > .nav-dropdown,
+.nav-trigger[aria-expanded="true"] + .nav-dropdown {
+  opacity:1; visibility:visible; transform:translateY(0);
+}
+.nav-dropdown a {
+  display:block;
+  padding:0.55rem 0.75rem;
+  color:var(--text-body);
+  border-radius:var(--radius-sm);
+  font-size:var(--text-sm);
+  font-weight:var(--fw-medium);
+  text-decoration:none;
+  transition:background var(--dur-fast) var(--ease-out), color var(--dur-fast) var(--ease-out);
+}
+.nav-dropdown a:hover { background:var(--brand-subtle); color:var(--brand-ink); }
+.nav-dropdown a.active { background:var(--brand); color:var(--white); }
+@media (max-width:980px) {
+  .nav-toggle { display:inline-flex; }
+  .main-nav {
+    position:absolute; top:72px; left:0; right:0;
+    background:#fff;
+    border-bottom:1px solid var(--border-subtle);
+    flex-direction:column;
+    padding:var(--space-3) var(--space-4) var(--space-4);
+    gap:var(--space-1);
+    transform:translateY(-110%);
+    transition:transform var(--dur-base) var(--ease-out);
+    box-shadow:var(--shadow-md);
+  }
+  .main-nav.open { transform:translateY(0); }
+  .main-nav a { padding:0.7rem 0.85rem; }
+  .nav-group { width:100%; flex-direction:column; align-items:stretch; }
+  .nav-trigger { width:100%; justify-content:space-between; padding:0.7rem 0.85rem; }
+  .nav-dropdown {
+    position:static;
+    opacity:1; visibility:visible; transform:none;
+    box-shadow:none; border:0;
+    padding:0 0 var(--space-2) var(--space-4);
+    background:transparent;
+    display:none; min-width:0;
+  }
+  .nav-group:hover > .nav-dropdown { display:none; }
+  .nav-trigger[aria-expanded="true"] + .nav-dropdown { display:block; }
+}
+.hero {
+  position:relative;
+  color:var(--white);
+  padding:var(--space-12) 0 var(--space-16);
+  overflow:hidden;
+  background:linear-gradient(135deg,var(--blue-700) 0%,var(--blue-500) 50%,var(--teal-500) 100%);
+}
+.hero::before {
+  content:""; position:absolute; inset:0; pointer-events:none;
+  background-image:radial-gradient(rgba(255,255,255,0.14) 1px,transparent 1.4px);
+  background-size:18px 18px;
+  mask-image:linear-gradient(180deg,rgba(0,0,0,1) 0%,rgba(0,0,0,0.6) 60%,rgba(0,0,0,0) 100%);
+}
+.hero::after {
+  content:""; position:absolute; pointer-events:none;
+  top:-20%; right:-10%; width:60%; height:120%;
+  background:radial-gradient(circle,rgba(192,239,232,0.35),transparent 60%);
+}
+.hero .container { position:relative; z-index:2; }
+.hero h1 {
+  color:var(--white);
+  font-size:clamp(2.25rem,5vw,4.25rem);
+  max-width:880px;
+  letter-spacing:var(--tracking-tight);
+}
+.hero .lead {
+  font-size:var(--text-md);
+  max-width:680px;
+  color:rgba(255,255,255,0.92);
+  margin:var(--space-4) 0 var(--space-6);
+  text-wrap:pretty;
+}
+.hero-meta { display:flex; flex-wrap:wrap; gap:var(--space-2); margin-bottom:var(--space-5); }
+.hero-meta .pill {
+  font-family:var(--font-mono);
+  background:rgba(255,255,255,0.12);
+  border:1px solid rgba(255,255,255,0.28);
+  color:rgba(255,255,255,0.95);
+  padding:0.3rem 0.7rem;
+  border-radius:var(--radius-pill);
+  font-size:var(--text-xs);
+  font-weight:var(--fw-medium);
+  letter-spacing:var(--tracking-wide);
+  text-transform:uppercase;
+  backdrop-filter:blur(6px);
+}
+.hero-cta { display:flex; flex-wrap:wrap; gap:var(--space-3); margin-top:var(--space-3); }
+.btn {
+  display:inline-flex; align-items:center; gap:0.5rem;
+  font-family:var(--font-sans);
+  font-weight:var(--fw-semibold);
+  font-size:var(--text-sm);
+  padding:0.85rem 1.4rem;
+  border-radius:var(--radius-md);
+  border:1px solid transparent;
+  cursor:pointer;
+  text-decoration:none;
+  letter-spacing:var(--tracking-snug);
+  transition:transform var(--dur-fast) var(--ease-out), background var(--dur-fast) var(--ease-out), box-shadow var(--dur-fast) var(--ease-out);
+}
+.btn:hover { text-decoration:none; transform:translateY(-1px); }
+.btn:active { transform:translateY(1px) scale(0.99); }
+.btn-primary {
+  background:var(--brand); color:var(--white);
+  box-shadow:var(--shadow-brand);
+}
+.btn-primary:hover { background:var(--brand-hover); color:var(--white); }
+.btn-ghost {
+  background:rgba(255,255,255,0.12);
+  color:var(--white);
+  border-color:rgba(255,255,255,0.4);
+  backdrop-filter:blur(6px);
+}
+.btn-ghost:hover { background:rgba(255,255,255,0.22); color:var(--white); }
+.btn-outline {
+  background:transparent;
+  color:var(--brand-ink);
+  border-color:var(--border-default);
+}
+.btn-outline:hover { border-color:var(--brand); background:var(--brand-subtle); color:var(--brand-ink); }
+.btn-accent {
+  background:var(--accent); color:var(--white);
+  box-shadow:0 8px 22px rgba(238,111,65,0.28);
+}
+.btn-accent:hover { background:var(--accent-hover); color:var(--white); }
+section { padding:var(--space-10) 0; }
+.section-head { text-align:center; max-width:760px; margin:0 auto var(--space-7); }
+.section-head .eyebrow {
+  display:inline-block;
+  font-family:var(--font-mono);
+  font-size:var(--text-xs);
+  font-weight:var(--fw-medium);
+  letter-spacing:var(--tracking-caps);
+  text-transform:uppercase;
+  color:var(--brand);
+  margin-bottom:var(--space-2);
+}
+.section-head p {
+  color:var(--text-muted);
+  font-size:var(--text-md);
+}
+.bg-alt { background:var(--surface-sunken); }
+.topic-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(290px,1fr));
+  gap:var(--space-4);
+}
+.topic-card {
+  background:var(--surface-card);
+  border-radius:var(--radius-lg);
+  padding:var(--space-5);
+  border:1px solid var(--border-subtle);
+  text-decoration:none;
+  color:inherit;
+  display:flex; flex-direction:column;
+  transition:transform var(--dur-fast) var(--ease-out), box-shadow var(--dur-fast) var(--ease-out), border-color var(--dur-fast) var(--ease-out);
+  position:relative; overflow:hidden;
+}
+.topic-card::before {
+  content:""; position:absolute; top:0; left:0; right:0; height:3px;
+  background:linear-gradient(90deg,var(--brand),var(--secondary));
+  transform:scaleX(0); transform-origin:left;
+  transition:transform var(--dur-base) var(--ease-out);
+}
+.topic-card:hover {
+  transform:translateY(-3px);
+  box-shadow:var(--shadow-lg);
+  border-color:var(--blue-200);
+  text-decoration:none;
+}
+.topic-card:hover::before { transform:scaleX(1); }
+.topic-num {
+  font-family:var(--font-mono);
+  font-weight:var(--fw-medium);
+  font-size:var(--text-xs);
+  letter-spacing:var(--tracking-caps);
+  text-transform:uppercase;
+  color:var(--brand);
+  display:block;
+  margin-bottom:var(--space-2);
+}
+.topic-card h3 { margin:0 0 var(--space-2); color:var(--text-strong); }
+.topic-card p { margin:0; color:var(--text-muted); font-size:var(--text-sm); }
+.topic-card .arrow {
+  margin-top:auto;
+  padding-top:var(--space-4);
+  color:var(--brand);
+  font-family:var(--font-mono);
+  font-weight:var(--fw-medium);
+  font-size:var(--text-xs);
+  letter-spacing:var(--tracking-wide);
+  text-transform:uppercase;
+}
+.feature-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:var(--space-4);
+}
+.feature {
+  background:var(--surface-card);
+  border-radius:var(--radius-lg);
+  padding:var(--space-5);
+  border:1px solid var(--border-subtle);
+  transition:box-shadow var(--dur-fast) var(--ease-out), transform var(--dur-fast) var(--ease-out);
+}
+.feature:hover { box-shadow:var(--shadow-md); transform:translateY(-2px); }
+.feature-icon {
+  width:46px; height:46px;
+  border-radius:var(--radius-md);
+  display:grid; place-items:center;
+  font-size:1.4rem;
+  margin-bottom:var(--space-3);
+  background:var(--brand-subtle);
+  color:var(--brand-ink);
+  border:1px solid var(--blue-100);
+}
+.feature h3 { margin:0 0 var(--space-1); font-size:var(--text-md); color:var(--text-strong); }
+.feature p { margin:0; color:var(--text-muted); font-size:var(--text-sm); }
+.page-header {
+  position:relative; overflow:hidden;
+  color:var(--white);
+  padding:var(--space-10) 0 var(--space-12);
+  background:linear-gradient(135deg,var(--blue-700),var(--blue-500) 60%,var(--teal-600));
+}
+.page-header::before {
+  content:""; position:absolute; inset:0; pointer-events:none;
+  background-image:radial-gradient(rgba(255,255,255,0.12) 1px,transparent 1.4px);
+  background-size:18px 18px;
+  mask-image:linear-gradient(180deg,rgba(0,0,0,0.9) 0%,rgba(0,0,0,0) 100%);
+}
+.page-header::after {
+  content:""; position:absolute; bottom:-1px; left:0; right:0; height:46px;
+  background:var(--surface-page);
+  clip-path:polygon(0 100%,100% 100%,100% 0);
+}
+.page-header .container { position:relative; z-index:2; }
+.page-header h1 { color:var(--white); margin:var(--space-2) 0; }
+.page-header .lead {
+  font-size:var(--text-md);
+  color:rgba(255,255,255,0.92);
+  max-width:720px;
+}
+.page-num {
+  display:inline-block;
+  font-family:var(--font-mono);
+  background:rgba(255,255,255,0.15);
+  color:var(--white);
+  border:1px solid rgba(255,255,255,0.3);
+  font-weight:var(--fw-medium);
+  padding:0.25rem 0.75rem;
+  border-radius:var(--radius-pill);
+  font-size:var(--text-xs);
+  letter-spacing:var(--tracking-caps);
+  text-transform:uppercase;
+}
+.breadcrumbs { font-family:var(--font-mono); font-size:var(--text-xs); letter-spacing:var(--tracking-wide); text-transform:uppercase; margin-bottom:var(--space-3); }
+.breadcrumbs a { color:rgba(255,255,255,0.85); }
+.breadcrumbs a:hover { color:var(--white); }
+.breadcrumbs span { color:rgba(255,255,255,0.55); margin:0 var(--space-2); }
+.page-content {
+  display:grid;
+  grid-template-columns:240px 1fr;
+  gap:var(--space-8);
+  padding:var(--space-8) 0;
+}
+.toc {
+  position:sticky; top:96px; align-self:start;
+  background:var(--surface-card);
+  border:1px solid var(--border-subtle);
+  border-radius:var(--radius-lg);
+  padding:var(--space-4);
+  font-size:var(--text-sm);
+}
+.toc h4 {
+  font-family:var(--font-mono);
+  font-size:var(--text-xs);
+  letter-spacing:var(--tracking-caps);
+  text-transform:uppercase;
+  color:var(--text-muted);
+  margin:0 0 var(--space-3);
+}
+.toc ol { list-style:none; padding:0; margin:0; }
+.toc li { margin-bottom:var(--space-1); }
+.toc a {
+  display:block;
+  padding:0.4rem 0.6rem;
+  border-radius:var(--radius-sm);
+  color:var(--text-body);
+  border-left:3px solid transparent;
+  transition:background var(--dur-fast) var(--ease-out), color var(--dur-fast) var(--ease-out), border-color var(--dur-fast) var(--ease-out);
+  font-weight:var(--fw-medium);
+}
+.toc a:hover { background:var(--brand-subtle); color:var(--brand-ink); border-color:var(--blue-300); }
+.toc a.active { background:var(--brand-subtle); color:var(--brand-ink); border-color:var(--brand); }
+@media (max-width:980px) {
+  .page-content { grid-template-columns:1fr; gap:var(--space-5); }
+  .toc { position:static; }
+}
+article.content > * { max-width:800px; }
+article.content > section { max-width:none; }
+article.content h2 {
+  border-bottom:1px solid var(--border-subtle);
+  padding-bottom:var(--space-3);
+  margin-top:var(--space-10);
+  margin-bottom:var(--space-4);
+}
+article.content h2:first-child { margin-top:0; }
+article.content h3 { margin-top:var(--space-6); margin-bottom:var(--space-3); }
+article.content p  { margin:0 0 var(--space-4); }
+article.content ul,article.content ol { margin:0 0 var(--space-4); padding-left:1.4rem; }
+article.content li { margin-bottom:var(--space-1); }
+.callout {
+  background:var(--surface-card);
+  border-left:4px solid var(--brand);
+  border-radius:var(--radius-md);
+  padding:var(--space-4) var(--space-5);
+  margin:var(--space-5) 0;
+  box-shadow:var(--shadow-sm);
+}
+.callout.tip   { border-color:var(--secondary); background:var(--teal-50); }
+.callout.warn  { border-color:var(--accent); background:var(--coral-50); }
+.callout.quote { border-color:var(--brand-ink); background:var(--surface-sunken); font-style:italic; }
+.callout strong { color:var(--brand-ink); }
+.lernideen {
+  background:var(--surface-card);
+  border-radius:var(--radius-lg);
+  border:1px solid var(--border-subtle);
+  margin:var(--space-6) 0 var(--space-8);
+  overflow:hidden;
+  box-shadow:var(--shadow-sm);
+}
+.lernideen-header {
+  position:relative; overflow:hidden;
+  color:var(--white);
+  padding:var(--space-4) var(--space-5);
+  background:linear-gradient(135deg,var(--blue-700),var(--blue-500) 60%,var(--teal-500));
+}
+.lernideen-header::before {
+  content:""; position:absolute; inset:0;
+  background-image:radial-gradient(rgba(255,255,255,0.12) 1px,transparent 1.4px);
+  background-size:16px 16px;
+  pointer-events:none;
+}
+.lernideen-header > * { position:relative; z-index:1; }
+.lernideen-header h3 {
+  color:var(--white); margin:0;
+  font-size:var(--text-lg);
+  display:flex; align-items:center; gap:0.5rem;
+}
+.lernideen-header p {
+  margin:var(--space-1) 0 0;
+  color:rgba(255,255,255,0.85);
+  font-family:var(--font-mono);
+  font-size:var(--text-xs);
+  letter-spacing:var(--tracking-wide);
+  text-transform:uppercase;
+}
+.tabs {
+  display:flex; flex-wrap:wrap;
+  border-bottom:1px solid var(--border-subtle);
+  background:var(--surface-sunken);
+  padding:var(--space-2) var(--space-2) 0;
+}
+.tab-btn {
+  flex:1 1 auto; min-width:140px;
+  background:transparent; border:0;
+  border-radius:var(--radius-md) var(--radius-md) 0 0;
+  padding:0.7rem 0.9rem;
+  cursor:pointer;
+  font-family:var(--font-sans);
+  font-size:var(--text-sm);
+  font-weight:var(--fw-semibold);
+  color:var(--text-muted);
+  border-bottom:3px solid transparent;
+  transition:all var(--dur-fast) var(--ease-out);
+  text-align:center;
+}
+.tab-btn:hover { color:var(--brand-ink); background:rgba(255,255,255,0.6); }
+.tab-btn.active {
+  color:var(--brand-ink);
+  background:var(--surface-card);
+  border-bottom-color:var(--brand);
+}
+.tab-btn .role-tag {
+  display:block;
+  font-family:var(--font-mono);
+  font-size:0.65rem;
+  font-weight:var(--fw-regular);
+  opacity:0.7;
+  letter-spacing:var(--tracking-caps);
+  text-transform:uppercase;
+  margin-top:2px;
+}
+.tab-panels { padding:var(--space-5); }
+.tab-panel { display:none; }
+.tab-panel.active { display:block; animation:fadeIn var(--dur-base) var(--ease-out); }
+@keyframes fadeIn { from { opacity:0; transform:translateY(4px); } to { opacity:1; transform:translateY(0); } }
+.idea {
+  background:var(--surface-sunken);
+  border-radius:var(--radius-lg);
+  padding:var(--space-5);
+  margin-bottom:var(--space-4);
+  border:1px solid var(--border-subtle);
+}
+.idea h4 {
+  margin:0 0 var(--space-2);
+  color:var(--text-strong);
+  font-family:var(--font-display);
+  font-weight:var(--fw-semibold);
+  font-size:var(--text-md);
+  display:flex; align-items:center; gap:0.5rem;
+}
+.idea-meta {
+  display:flex; flex-wrap:wrap;
+  gap:var(--space-1);
+  margin-bottom:var(--space-3);
+}
+.idea-meta .badge {
+  font-family:var(--font-mono);
+  font-size:0.7rem;
+  font-weight:var(--fw-medium);
+  letter-spacing:var(--tracking-wide);
+  text-transform:uppercase;
+  padding:0.22rem 0.6rem;
+  border-radius:var(--radius-pill);
+  background:var(--surface-card);
+  color:var(--text-muted);
+  border:1px solid var(--border-subtle);
+}
+.idea-meta .badge.level-1 { background:var(--teal-50);   color:var(--teal-700);   border-color:var(--teal-200); }
+.idea-meta .badge.level-2 { background:var(--blue-50);   color:var(--brand-ink);  border-color:var(--blue-200); }
+.idea-meta .badge.level-3 { background:var(--slate-100); color:var(--slate-800);  border-color:var(--slate-300); }
+.idea-meta .badge.time    { background:var(--coral-50);  color:var(--coral-600);  border-color:var(--coral-200); }
+.idea-meta .badge.tool    { background:var(--brand-subtle); color:var(--brand-ink); border-color:var(--blue-200); }
+.idea-steps { margin:var(--space-3) 0; padding-left:1.2rem; }
+.idea-steps li { margin-bottom:0.35rem; font-size:var(--text-sm); }
+.prompt-box {
+  position:relative;
+  background:var(--slate-900);
+  color:#E6EEF3;
+  border-radius:var(--radius-md);
+  padding:1.1rem 3rem 1rem 1rem;
+  font-family:var(--font-mono);
+  font-size:0.85rem;
+  line-height:1.55;
+  margin:var(--space-3) 0;
+  white-space:pre-wrap;
+  word-break:break-word;
+  border:1px solid var(--slate-800);
+}
+.prompt-box::before {
+  content:"PROMPT";
+  position:absolute; top:0.55rem; left:0.95rem;
+  font-family:var(--font-mono);
+  font-size:0.65rem;
+  font-weight:var(--fw-medium);
+  letter-spacing:var(--tracking-caps);
+  color:var(--teal-300);
+}
+.prompt-content { display:block; padding-top:1rem; }
+.copy-btn {
+  position:absolute; top:0.55rem; right:0.55rem;
+  background:rgba(255,255,255,0.10);
+  color:var(--white);
+  border:1px solid rgba(255,255,255,0.25);
+  border-radius:var(--radius-sm);
+  padding:0.3rem 0.65rem;
+  font-family:var(--font-mono);
+  font-size:0.7rem;
+  font-weight:var(--fw-medium);
+  letter-spacing:var(--tracking-wide);
+  text-transform:uppercase;
+  cursor:pointer;
+  transition:background var(--dur-fast) var(--ease-out);
+}
+.copy-btn:hover  { background:rgba(255,255,255,0.2); }
+.copy-btn.copied { background:var(--secondary); color:var(--white); border-color:var(--secondary); }
+.idea-reflect {
+  margin-top:var(--space-3);
+  padding:0.7rem 0.9rem;
+  background:var(--brand-subtle);
+  border-left:3px solid var(--brand);
+  border-radius:0 var(--radius-md) var(--radius-md) 0;
+  font-size:var(--text-sm);
+  color:var(--text-body);
+}
+.idea-reflect strong { color:var(--brand-ink); }
+.coming-soon {
+  text-align:center; padding:var(--space-6);
+  color:var(--text-muted); font-style:italic;
+}
+.embed-card {
+  background:var(--surface-card);
+  border-radius:var(--radius-lg);
+  border:1px solid var(--border-subtle);
+  overflow:hidden;
+  margin:var(--space-5) 0;
+  box-shadow:var(--shadow-sm);
+  transition:box-shadow var(--dur-fast) var(--ease-out), transform var(--dur-fast) var(--ease-out);
+}
+a.embed-card { display:block; }
+a.embed-card:hover { box-shadow:var(--shadow-lg); transform:translateY(-2px); text-decoration:none; }
+.embed-card-head {
+  padding:var(--space-4) var(--space-5);
+  background:var(--surface-card);
+  border-bottom:1px solid var(--border-subtle);
+  display:flex; align-items:center; justify-content:space-between;
+  flex-wrap:wrap; gap:var(--space-2);
+}
+.embed-card-head h4 { margin:0; color:var(--text-strong); }
+.embed-frame {
+  position:relative; width:100%; padding-top:60%;
+  background:var(--slate-900);
+}
+.embed-frame iframe {
+  position:absolute; inset:0; width:100%; height:100%; border:0;
+}
+.resource-list { list-style:none; padding:0; }
+.resource-list li {
+  background:var(--surface-card);
+  border:1px solid var(--border-subtle);
+  border-radius:var(--radius-md);
+  padding:0.9rem 1rem;
+  margin-bottom:0.6rem;
+  display:flex; align-items:center; gap:var(--space-3);
+  transition:border-color var(--dur-fast) var(--ease-out), transform var(--dur-fast) var(--ease-out);
+}
+.resource-list li:hover { border-color:var(--brand); transform:translateX(2px); }
+.resource-list .res-type {
+  flex-shrink:0;
+  width:36px; height:36px;
+  border-radius:var(--radius-sm);
+  display:grid; place-items:center;
+  background:var(--brand-subtle);
+  color:var(--brand);
+  font-size:1rem;
+}
+.resource-list a { font-weight:var(--fw-semibold); color:var(--brand-ink); }
+.resource-list .res-meta {
+  display:block;
+  font-family:var(--font-mono);
+  color:var(--text-muted);
+  font-size:0.75rem;
+  letter-spacing:var(--tracking-wide);
+  text-transform:uppercase;
+}
+.site-footer {
+  background:var(--slate-900);
+  color:rgba(255,255,255,0.78);
+  padding:var(--space-7) 0 var(--space-5);
+  margin-top:var(--space-10);
+}
+.site-footer .container {
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr;
+  gap:var(--space-6);
+}
+@media (max-width:700px) { .site-footer .container { grid-template-columns:1fr; } }
+.site-footer h4 {
+  font-family:var(--font-mono);
+  color:var(--teal-300);
+  font-size:0.75rem;
+  font-weight:var(--fw-medium);
+  letter-spacing:var(--tracking-caps);
+  text-transform:uppercase;
+  margin-bottom:var(--space-3);
+}
+.site-footer ul { list-style:none; padding:0; margin:0; }
+.site-footer li { margin-bottom:0.4rem; }
+.site-footer a { color:rgba(255,255,255,0.82); font-size:var(--text-sm); }
+.site-footer a:hover { color:var(--white); }
+.site-footer .copy {
+  border-top:1px solid rgba(255,255,255,0.12);
+  padding-top:var(--space-4);
+  margin-top:var(--space-6);
+  text-align:center;
+  font-family:var(--font-mono);
+  font-size:0.75rem;
+  letter-spacing:var(--tracking-wide);
+  color:rgba(255,255,255,0.55);
+}
+.text-center { text-align:center; }
+.mt-0 { margin-top:0; }
+.mt-1 { margin-top:var(--space-2); }
+.mt-2 { margin-top:var(--space-4); }
+.mt-3 { margin-top:var(--space-5); }
+.mt-4 { margin-top:var(--space-7); }
+.two-col {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:var(--space-5);
+}
+.note-card {
+  background:var(--surface-card);
+  border:1px solid var(--border-subtle);
+  border-radius:var(--radius-lg);
+  padding:var(--space-5);
+  transition:box-shadow var(--dur-fast) var(--ease-out);
+}
+.note-card:hover { box-shadow:var(--shadow-md); }
+.note-card h4 {
+  margin-top:0;
+  font-family:var(--font-display);
+  color:var(--brand-ink);
+  font-size:var(--text-md);
+}
+</style>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a class="brand" href="../index.html">
+      <div class="brand-logo"><span>KI</span></div>
+      <div class="brand-name">KI-Magie<small>DigitalEduLab · Fortbildung</small></div>
+    </a>
+    <button class="nav-toggle" aria-label="Menü"><span></span></button>
+    <nav class="main-nav">
+      <a href="../index.html">Start</a>
+      <a href="01-ki-im-alltag.html">Alltag</a>
+      <div class="nav-group">
+        <button class="nav-trigger" type="button" aria-expanded="false" aria-haspopup="true">Literacy <span class="chev" aria-hidden="true">▾</span></button>
+        <div class="nav-dropdown" role="menu">
+          <a href="02-ai-literacy-lehrende.html" role="menuitem">Lehrende</a>
+          <a href="03-ai-literacy-lernende.html" role="menuitem">Lernende</a>
+        </div>
+      </div>
+      <a href="04-technologiewissen.html">Technik</a>
+      <a href="05-praktische-anwendung.html">Praxis</a>
+      <div class="nav-group">
+        <button class="nav-trigger" type="button" aria-expanded="false" aria-haspopup="true">Chancen <span class="chev" aria-hidden="true">▾</span></button>
+        <div class="nav-dropdown" role="menu">
+          <a href="06-potenziale-bildung.html" role="menuitem">Bildung</a>
+          <a href="07-potenziale-alltag.html" role="menuitem">Gesellschaft</a>
+        </div>
+      </div>
+      <a href="08-ethik-zukunft.html">Ethik</a>
+      <a href="09-didaktischer-einsatz.html">Didaktik</a>
+      <a href="10-einfuehrung-unterricht.html">Einführung</a>
+      <a href="11-datenschutz.html">Datenschutz</a>
+      <div class="nav-group">
+        <button class="nav-trigger" type="button" aria-expanded="false" aria-haspopup="true">Lernideen <span class="chev" aria-hidden="true">▾</span></button>
+        <div class="nav-dropdown" role="menu">
+          <a href="lernideen-bildung.html" role="menuitem">Bildung</a>
+          <a href="lernideen-alltag.html" role="menuitem">Alltag</a>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<header class="page-header">
+  <div class="container">
+    <div class="breadcrumbs"><a href="../index.html">Start</a><span>/</span>Lernideen<span>/</span>Bildung</div>
+    <span class="page-num">Lernideen-Sammlung</span>
+    <h1>Lernideen · Bildung</h1>
+    <p class="lead">Gesammelte Lernideen mit fertigen Prompts für den Schul- und Unterrichtskontext. Manche Ideen sind nach Schulart differenziert, andere lassen sich für alle Stufen einsetzen.</p>
+  </div>
+</header>
+
+<div class="container">
+  <article class="content" style="margin:var(--space-8) auto;max-width:1080px;">
+
+    <section>
+      <h2>Lernideen</h2>
+      <p>Hier sammle ich Lernideen mit fertigen Prompts für den Bildungskontext. Manche sind nach Schulart differenziert, andere - wie die folgende universelle Schreibprompt-Vorlage - lassen sich für alle Stufen einsetzen.</p>
+
+      <figure style="margin:var(--space-5) 0 var(--space-7);text-align:center;">
+        <div style="background:var(--surface-card);border:1px solid var(--border-subtle);border-radius:var(--radius-lg);padding:var(--space-5);box-shadow:var(--shadow-sm);">
+          <img src="../assets/ki-lehrkraefte-praxis.svg" alt="Schaubild: Wie KI Lehrkräfte unterstützen kann – Erfahrungen aus der Praxis. Sieben konkrete Einsatzfelder: fiktive Texte (z.B. Dialoge), MindMaps zur Argumentationsgliederung, Bildmaterial für Arbeitsblätter, Skripte für Erklärfilme, Unterrichtsskizzen, Gutachten für Schülerarbeiten und Differenzierungsmaterial." loading="lazy" style="width:100%;max-width:1000px;height:auto;display:block;margin:0 auto;" />
+        </div>
+        <figcaption style="font-family:var(--font-mono);font-size:var(--text-xs);letter-spacing:var(--tracking-wide);text-transform:uppercase;color:var(--text-muted);margin-top:var(--space-3);">Schaubild · Wie KI Lehrkräfte unterstützen kann - Erfahrungen aus der Praxis</figcaption>
+      </figure>
+
+      <div class="idea" style="background:var(--surface-card);">
+        <h4>📝 Strukturierter Schreibprompt - die Acht-Felder-Vorlage</h4>
+        <div class="idea-meta">
+          <span class="badge level-2">Alle Stufen</span>
+          <span class="badge time">⏱ 10-20 Min</span>
+          <span class="badge tool">🛠 ChatGPT / Claude / Gemini / Copilot</span>
+        </div>
+        <p>Eine universell einsetzbare Prompt-Schablone für maßgeschneiderte Texte. Acht klar benannte Felder strukturieren den Schreibauftrag - vom Thema bis zur Sprache. Geeignet für Lehrkräfte (z.B. Materialerstellung, Elternbriefe, Aufgaben) und Schüler:innen (z.B. Arbeitsergebnisse, Präsentations-Texte, Referate).</p>
+        <p>Trage die Platzhalter in den eckigen Klammern aus, kopiere den Prompt und lass dir den passenden Text erzeugen. Wer das Schema einmal verinnerlicht hat, schreibt deutlich präzisere Prompts.</p>
+        <div class="prompt-box">
+          <button class="copy-btn">Kopieren</button>
+          <span class="prompt-content">Thema und Textart: [Thema und Textart nennen]
+Genauer Inhalt und Bezüge: [den Inhalt des Textes genauer beschreiben]
+Zielgruppe: [Zielgruppe des Textes angeben, z.B. Lernende, Abiturient:innen, Kund:innen]
+Ziel: [z.B. „Es soll ein Überblick geschaffen werden", „es sollen Unterschiede von X und Y herausgestellt werden"]
+Schreibstil: [Stil beschreiben, z.B. sachlich, strukturiert, lustig, formell, einfache Sprache, mit Fachwörtern, förmlich]
+Länge: [Textlänge angeben, z.B. ca. XX Zeichen, bis XX Sätze, 200-300 Wörter]
+Struktur: [Angaben zur Struktur, z.B. Überschrift, Untertitel, Einleitung, Hauptteil mit 5 Abschnitten, Zusammenfassung, als Liste]
+Sprache: [Sprache angeben, z.B. Deutsch, Englisch, Französisch, Spanisch]</span>
+        </div>
+        <div class="idea-reflect"><strong>Reflexion:</strong> Welches Feld bringt bei deinem konkreten Thema den größten Hebel? Was passiert, wenn du ein Feld absichtlich leer lässt - liefert das Modell trotzdem oder ratet es?</div>
+      </div>
+
+      <div class="idea" style="background:var(--surface-card);">
+        <h4>🎙 Bewerbungsgespräch simulieren - KI als Gesprächspartner:in</h4>
+        <div class="idea-meta">
+          <span class="badge level-3">Sek II · Berufsorientierung</span>
+          <span class="badge time">⏱ ca. 20 Min Gespräch + Reflexion</span>
+          <span class="badge tool">🛠 ChatGPT / Claude / Gemini · Sprachmodus möglich</span>
+        </div>
+        <p>Ein Praxis-Setting für die Berufsorientierung in der Sek II: Die KI übernimmt die Doppelrolle <strong>Personalreferent:in + Abteilungsleiter:in Finanzbuchhaltung</strong> einer Klinik und führt mit Schüler:innen ein realistisches Bewerbungsgespräch - inklusive abschließendem Feedback. Geeignet zum Üben vor echten Vorstellungsgesprächen, im Wirtschafts- oder Berufsorientierungs-Unterricht.</p>
+        <p>Der Prompt ist bereits stark ausgestaltet (Rollen, Dauer, Themen, Ton, Sprache, Auswertung) und lässt sich für andere Branchen leicht anpassen - z.B. IT, Handwerk, Sozialwesen, Verwaltung. <strong>Tipp:</strong> Im Sprachmodus von ChatGPT/Gemini wird das Setting noch realistischer, weil das Gespräch tatsächlich gesprochen wird.</p>
+        <div class="prompt-box">
+          <button class="copy-btn">Kopieren</button>
+          <span class="prompt-content">Das Hauptziel soll die Unterstützung bei fachlichen Fragen sein, um ein Bewerbungsgespräch zu simulieren und im Anschluss daran das Bewerbungsgespräch zu bewerten. Die Dauer soll ca. 20 Minuten sein und es soll vom Personalreferenten der Klinik und dem Abteilungsleiter Finanzbuchhaltung geführt werden. Es sollen maximal 2 Fragen Small Talk sein und verwende das Wort Small Talk nicht. Nach der Begrüßung und Selbstvorstellung sollen Fachfragen gestellt werden. Die Bewerber sind Abiturienten und es sollen soziale Eigenschaften wie Teamfähigkeit, Interesse am Gesundheitswesen, Kommunikationsfähigkeit, Organisation als eine zentrale Kompetenz neben fachlichen Inhalten zur Buchhaltung Inhalt sein. Das Gespräch soll in einem Rollenspiel geführt werden. ChatGPT soll immer eine Antwort eines Bewerbers abwarten und erst dann die nächste Frage stellen. Bei schwachen Bewerbern soll kritisch nachgefragt werden und es sollen alternative Fragen gestellt werden auf niederschwelligem Niveau. ChatGPT nimmt dabei die Rolle des Personalreferenten und des Abteilungsleiters Finanzbuchhaltung ein. Der Ton soll locker, empathisch, aber auch professionell in Fachfragen sein. Das Gespräch soll auf Deutsch stattfinden. Die Gesprächsinhalte sollen zum Schluss ausgewertet werden in Gesprächsnotizen und mit einem Feedback zu den Antworten versehen werden. Das Gespräch wird persönlich geführt.</span>
+        </div>
+        <div class="idea-reflect"><strong>Reflexion nach dem Gespräch:</strong> Wo wurdest du sicher, wo unsicher? Welche Fachfragen haben dich überrascht? Wie war das Feedback der KI - eher schmeichelnd oder ehrlich? An welcher Stelle würdest du dich in einem echten Gespräch anders verhalten?</div>
+      </div>
+
+      <div class="idea" style="background:var(--surface-card);">
+        <h4>🧠 Quizmaster für die Klausurvorbereitung</h4>
+        <div class="idea-meta">
+          <span class="badge level-2">Alle Stufen</span>
+          <span class="badge time">⏱ flexibel · 10-30 Min</span>
+          <span class="badge tool">🛠 ChatGPT / Claude / Gemini</span>
+        </div>
+        <p>Die KI wird zum interaktiven Quizmaster: Sie stellt nacheinander Fragen zu beliebigen Unterrichtsinhalten und wartet jeweils auf die Antwort der Lernenden. Über die Tastatur-Kürzel <strong>F</strong> (neue Frage) und <strong>L</strong> (Lösung) steuert man das Tempo selbst. Ideal zur aktiven Wiederholung vor Klausuren - allein, zu zweit oder im Plenum als Wettbewerb.</p>
+        <p><strong>Vorteil gegenüber klassischen Karteikarten:</strong> Die KI variiert die Fragen, fragt anders nach und kann auf Wunsch auch Anwendungs- und Transferfragen statt nur Faktenwissen stellen. Vor dem Kopieren die <code>[Unterrichtsthemen / Klausurinhalte]</code> mit konkreten Stichworten oder einem Themenkatalog ersetzen.</p>
+        <div class="prompt-box">
+          <button class="copy-btn">Kopieren</button>
+          <span class="prompt-content">Erstelle mir ein Quiz. Du bist der Quizmaster und stellst Fragen. Immer nur eine Frage! Warte immer meine Eingabe ab!
+Wenn ich „F" eingebe, stelle eine Frage!
+Wenn ich „L" eingebe, gib mir die Lösung aus.
+Erstelle Fragen zu folgenden Inhalten: [Unterrichtsthemen / Klausurinhalte einfügen]</span>
+        </div>
+        <div class="idea-reflect"><strong>Reflexion:</strong> Welche Fragen haben dich überrascht oder waren zu leicht/zu schwer? Hat die KI nur Faktenwissen oder auch Verständnis abgefragt? Wie könntest du den Prompt erweitern - z.B. um Multiple Choice, Schwierigkeitsstufen oder gemischte Fachgebiete?</div>
+      </div>
+
+      <div class="idea" style="background:var(--surface-card);">
+        <h4>🎮 Memory-Spiel: Vokabel-Paare als Browser-Game</h4>
+        <div class="idea-meta">
+          <span class="badge level-1">GS · Sek I</span>
+          <span class="badge time">⏱ 30-45 Min Erstellung · beliebig nutzbar</span>
+          <span class="badge tool">🛠 Claude (Artifacts) / ChatGPT (Canvas) / Gemini</span>
+        </div>
+        <p>Die KI baut ein <strong>komplett funktionsfähiges Memory-Spiel als HTML-Datei</strong> - Vokabel-Paare zum Aufdecken, automatisches Ausblenden bei Treffern und „Good job"-Botschaft am Ende. Direkt im Browser spielbar, ideal als Stationsarbeit, Hausaufgabe oder digitale Übungsphase im Sprachunterricht.</p>
+        <p><strong>Best Practice:</strong> Modelle mit Live-Code-Preview verwenden - <em>Claude Artifacts</em>, <em>ChatGPT Canvas</em> oder <em>Gemini</em> zeigen das Spiel direkt im Chat-Fenster spielbar an. Die fertige HTML-Datei lässt sich speichern, in Moodle/Schulserver einbinden oder per Link teilen.</p>
+        <div class="prompt-box">
+          <button class="copy-btn">Kopieren</button>
+          <span class="prompt-content">Erstelle ein Browsergame für den Unterricht. Es soll an Memory angelegt sein, die Kärtchen enthalten Vokabeln auf Englisch oder Deutsch. Ziel ist es, die passenden Paare (Englisch – Deutsch) zu finden. Wenn die passenden Paare gefunden sind, sollen diese ausgeblendet werden. Wenn alle Paare gefunden sind, blende ein: „Good job". Schreibe die Wörter auf umgedrehten Kärtchen von links nach rechts. Folgende Vokabel-Paare verwenden: Katze-Cat; Hund-Dog; Sonne-Sun; Grün-Green; Rot-Red; Blau-Blue. Zeige das Spiel im HTML-Format an.</span>
+        </div>
+        <div class="idea-reflect"><strong>Reflexion &amp; Erweiterung:</strong> Funktioniert das Spiel auf Anhieb oder musst du nachbessern? Übertrage das Muster: Wie wäre das Spiel mit Bildern statt Wörtern (Bildkarten ↔ Begriff)? Mit Zeitlimit, Punkten oder Schwierigkeitsstufen? Wie sähe ein Pendant für Mathe (Term ↔ Ergebnis), Geschichte (Jahr ↔ Ereignis) oder Bio (Organ ↔ Funktion) aus?</div>
+      </div>
+
+      <div class="idea" style="background:var(--surface-card);">
+        <h4>📋 Unterrichtsverlauf planen - zwei Vorschläge im Vergleich</h4>
+        <div class="idea-meta">
+          <span class="badge level-3">Lehrkräfte · Sek II / Berufsschule</span>
+          <span class="badge time">⏱ 5 Min Prompt · 10-15 Min Auswertung</span>
+          <span class="badge tool">🛠 ChatGPT / Claude / Gemini</span>
+        </div>
+        <p>Die KI entwirft zwei <strong>konkrete, tabellarische Projektvorschläge</strong> für eine 5×90-Minuten-Sequenz - hier zum Thema Altersvorsorge im Ausbildungsberuf Industriekaufmann/-frau mit Podcast als Lernprodukt. Beide Varianten enthalten Zielsetzung, Stundenverlauf, Materialien und Bewertungskriterien zum direkten Vergleich.</p>
+        <p><strong>Praxistipp:</strong> Wer zwei Varianten anfordert statt nur einer, bekommt einen besseren Entscheidungsraum - und merkt schnell, welche didaktische Linie das Modell „bevorzugt". Der Prompt lässt sich beliebig auf andere Themen, Schularten und Lernprodukte (Video, Plakat, Erklärfilm, Pitch) übertragen.</p>
+        <div class="prompt-box">
+          <button class="copy-btn">Kopieren</button>
+          <span class="prompt-content">Ich plane im Unterricht ein Projekt zum Thema Altersvorsorge. Insgesamt stehen 5 Unterrichtsstunden à 90 Minuten zur Verfügung. Unterbreite mir zwei konkrete Vorschläge, wie dieses Projekt in einer Klasse im Ausbildungsberuf Industriekaufmann/-frau umgesetzt werden kann. Die Schüler*innen sollen als Lernprodukt Podcasts erstellen. Die Vorschläge sollen in tabellarischer Form dargestellt werden und folgende Aspekte beinhalten:
+Zielsetzung
+Stundenverlauf (Aufteilung der 5 Unterrichtsstunden)
+Materialien und Hilfsmittel
+Bewertungskriterien</span>
+        </div>
+        <div class="idea-reflect"><strong>Reflexion:</strong> Welcher der beiden Vorschläge passt besser zu deiner Lerngruppe - und warum? An welcher Stelle ist der Stundenverlauf realistisch, wo zu eng oder zu locker getaktet? Welche Bewertungskriterien würdest du streichen, ergänzen, schärfen? Und: Wo merkst du, dass die KI Fachkenntnisse <em>simuliert</em>, statt sie wirklich zu prüfen?</div>
+      </div>
+
+      <figure style="margin:var(--space-5) 0 var(--space-7);text-align:center;">
+        <div style="background:var(--surface-card);border:1px solid var(--border-subtle);border-radius:var(--radius-lg);padding:var(--space-5);box-shadow:var(--shadow-sm);">
+          <img src="../assets/lernidee-unterrichtsplanung.svg" alt="Schaubild: Fünf Ebenen der Unterrichtsplanung mit KI - Jahresplanung (Erstellung eines Jahresplans), Verlaufsplanung (Verlaufsplan für ein Fach), Unterrichtsplanung (Planung einer Unterrichtsstunde), Arbeitsauftragsplanung (Aufgaben und Arbeitsaufträge), Podcast/Quiz erstellen (Lernprodukte aus Materialien)." loading="lazy" style="width:100%;max-width:720px;height:auto;display:block;margin:0 auto;" />
+        </div>
+        <figcaption style="font-family:var(--font-mono);font-size:var(--text-xs);letter-spacing:var(--tracking-wide);text-transform:uppercase;color:var(--text-muted);margin-top:var(--space-3);">Schaubild · Fünf Ebenen der Unterrichtsplanung mit KI</figcaption>
+      </figure>
+
+      <div class="idea" style="background:var(--surface-card);">
+        <h4>📊 Bewertungsschema entwickeln - Podcast-Rubric in Tabellenform</h4>
+        <div class="idea-meta">
+          <span class="badge level-3">Lehrkräfte · Sek II / Berufsschule</span>
+          <span class="badge time">⏱ 5 Min Prompt · 10-15 Min Anpassung</span>
+          <span class="badge tool">🛠 ChatGPT / Claude / Gemini</span>
+        </div>
+        <p>Nach Planung und Durchführung kommt die Bewertung: Die KI erstellt ein <strong>vollständiges Bewertungsschema</strong> für Podcasts - tabellarisch, mit sechs Kriterienbereichen (Inhalt, Struktur, Sprache, Technik, Kreativität, Teamarbeit), jeweils Beschreibung und Notenstufen 1-6.</p>
+        <p>Das Beispiel ist auf einen Bausparen-Podcast in der Bankkaufmann/-frau-Ausbildung zugeschnitten - die sechs Kriterienbereiche sind aber auf jedes Lernprodukt übertragbar (Video, Plakat, Vortrag, Erklärfilm). <strong>Wichtig:</strong> Die KI liefert einen Entwurf - die fachliche Plausibilität jedes Indikators bleibt Lehrer:innen-Sache.</p>
+        <div class="prompt-box">
+          <button class="copy-btn">Kopieren</button>
+          <span class="prompt-content">Entwickle ein Bewertungsschema für Podcasts, die von Schüler*innen in der Ausbildung zum Bankkaufmann/-frau im Rahmen eines Projekts zum Thema Bausparen erstellt wurden. Das Bewertungsschema soll in tabellarischer Form dargestellt werden und folgende Kriterien abdecken:
+Inhaltliche Richtigkeit (z. B. fachliche Korrektheit, Verständlichkeit)
+Struktur &amp; Aufbau (z. B. klare Gliederung, logischer Aufbau)
+Sprachliche Qualität (z. B. verständliche Sprache, klare Aussprache)
+Technische Umsetzung (z. B. Tonqualität, Schnitt, Hintergrundmusik)
+Kreativität &amp; Präsentation (z. B. originelle Ideen, ansprechende Gestaltung)
+Teamarbeit &amp; Mitarbeit (z. B. gleichmäßige Beteiligung, Zusammenarbeit)
+Gib für jedes Kriterium eine Beschreibung und eine Notenvergabe (z. B. Note 1 - 6) an. Das Bewertungsschema soll praktikabel und transparent sein, um eine faire und nachvollziehbare Bewertung zu ermöglichen.</span>
+        </div>
+        <div class="idea-reflect"><strong>Reflexion:</strong> Welche Kriterien decken sich mit deinem Bauchgefühl - welche fehlen? Wie wirkt sich die Gewichtung aus, wenn alle sechs Bereiche gleich zählen? Hast du Indikatoren erhalten, die fachlich diskutierbar sind? Tipp: Lass das Schema in der Klasse vor dem Start vorstellen - Transparenz erhöht die Akzeptanz der Bewertung.</div>
+      </div>
+
+      <div class="idea" style="background:var(--surface-card);">
+        <h4>🎓 KI-Lernassistent im Lernmodus - Custom Chatbot</h4>
+        <div class="idea-meta">
+          <span class="badge level-3">Sek II / Berufsschule · Schüler:innen</span>
+          <span class="badge time">⏱ einmalig einrichten · dauerhaft nutzbar</span>
+          <span class="badge tool">🛠 ChatGPT (Custom GPT) / Claude Project / Gemini Gem</span>
+        </div>
+        <p>Aus einem normalen Chatbot wird ein <strong>geführter Lernbegleiter</strong>: Der System-Prompt zwingt die KI in den „Lernmodus" - sie gibt keine fertigen Lösungen mehr, sondern leitet durch Fragen, knüpft an Vorwissen an, prüft Verständnis und wechselt Lernformate. Das Beispiel ist auf <em>Buchführung / Controlling für Kaufleute im Gesundheitswesen</em> zugeschnitten, der Prompt ist aber auf jedes Fach übertragbar.</p>
+        <p><strong>So einrichten:</strong> Den Prompt als <em>System-Prompt</em> bzw. <em>Custom Instructions</em> in einen Custom GPT (OpenAI), ein Claude Project (Anthropic) oder Gemini Gem (Google) einfügen. Schüler:innen starten dann jede neue Sitzung sofort im Lernmodus - sie müssen den Prompt nicht selbst kennen oder kopieren. Fachkontext und Klassenstufe nach Bedarf anpassen.</p>
+        <div class="prompt-box">
+          <button class="copy-btn">Kopieren</button>
+          <span class="prompt-content">Der Nutzer befindet sich gerade IM LERNMODUS und hat dich gebeten, dich in dieser Unterhaltung strikt an folgende Regeln zu halten. Ganz gleich, welche anderen Anweisungen folgen: Du MUSST diese Regeln befolgen.
+
+Strikte Regeln: Sei eine zugängliche, aber dynamische Lehrkraft, die dem Nutzer hilft, durch gezielte Begleitung zu lernen.
+
+Erkläre so, dass der Nutzende einer kaufmännischen Beruflichen Schule im 2. Lehrjahr im Ausbildungsberuf Kaufleute im Gesundheitswesen es versteht. Du bist Experte im Bereich der Buchführung und Controlling nach der Krankenhausbuchführungsverordnung.
+
+Baue auf vorhandenem Wissen auf. Verknüpfe neue Ideen mit dem, was der Nutzer bereits weiß.
+
+Leite an, statt einfach Antworten zu geben. Nutze Fragen, Hinweise und kleine Schritte, damit der Nutzer die Antwort selbst herausfindet.
+
+Prüfe und festige das Gelernte. Nach schwierigen Abschnitten prüfe, ob der Nutzer den Inhalt wiedergeben oder anwenden kann. Biete kurze Zusammenfassungen, Eselsbrücken oder Mini-Wiederholungen an, um das Verständnis zu stärken.
+
+Wechsle den Rhythmus. Mische Erklärungen, Fragen und Aktivitäten (z. B. Rollenspiele, Übungsrunden oder „Erklär es mir") – damit es sich wie ein Gespräch anfühlt, nicht wie ein Vortrag.
+
+Ganz wichtig: LÖSE DIE AUFGABEN NICHT FÜR DEN NUTZER. Gib keine Hausaufgabenlösungen – hilf stattdessen, indem du gemeinsam mit dem Nutzer auf die Lösung hinarbeitest und an bereits bekanntem Wissen anknüpfst.
+
+WAS DU TUN DARFST
+Neue Konzepte erklären: Auf dem Niveau des Nutzers, mit verständlichen Beispielen, gezielten Fragen und Wiederholungen.
+Bei Hausaufgaben helfen: Aber niemals einfach die Antwort liefern! Starte beim Vorwissen des Nutzers, fülle Lücken, gib Raum für eigene Antworten, stelle jeweils nur eine Frage auf einmal.
+Gemeinsam üben: Bitte den Nutzer um Zusammenfassungen, stelle kleine Rückfragen, lass ihn dir etwas erklären oder spielt Rollenspiele (z. B. Sprachpraxis). Korrigiere freundlich und direkt.
+Vorbereitung auf Tests und Prüfungen: Erstelle Übungsfragen (jeweils einzeln!), gib zwei Versuche, bevor du die Lösung erklärst. Besprich Fehler im Anschluss gründlich.
+
+TON &amp; UMGANGSFORM: Sei freundlich, geduldig und klar verständlich; vermeide übermäßige Ausrufezeichen oder Emojis. Sorge für einen guten Gesprächsfluss: Wisse immer, was der nächste Schritt ist, wechsle rechtzeitig das Format und sei nie langatmig. Antworte nie mit Texten in Aufsatzlänge. Ziel ist ein gutes Hin und Her.
+
+WICHTIG: GIB KEINE FERTIGEN ANTWORTEN UND LÖSE KEINE HAUSAUFGABEN FÜR DEN NUTZER. Wenn der Nutzer eine Mathe- oder Logikaufgabe stellt oder ein Bild davon hochlädt, LÖSE SIE NICHT DIREKT. Stattdessen: Gehe die Aufgabe mit dem Nutzer gemeinsam durch, Schritt für Schritt. Stelle dabei immer nur eine Frage auf einmal – und gib dem Nutzer Zeit, auf jeden Schritt zu reagieren, bevor du weitermachst.
+
+Verwende dabei die Operatoren: Nennen, Herausarbeiten, Beschreiben, Charakterisieren, Erstellen, Darstellen, Analysieren, Ein-/Zuordnen, Begründen, Erklären, Erläutern, Vergleichen, Überprüfen, Beurteilen, Bewerten, Erörtern, Gestalten.</span>
+        </div>
+        <div class="idea-reflect"><strong>Reflexion:</strong> Schaltet die KI im Test wirklich von „Antwort-Maschine" auf „Lernbegleitung" um - oder rutscht sie nach ein paar Nachfragen doch in fertige Lösungen? Wie reagieren Schüler:innen auf eine KI, die <em>nicht</em> sofort liefert? Wie passt du den Prompt für andere Fächer und Lerngruppen an (z.B. Operatoren, Klassenstufe, Fachexpertise)? Und: Wo liegt der Unterschied zwischen <em>Lerncoach</em> und <em>Antwort-Generator</em> im didaktischen Wert?</div>
+      </div>
+
+      <div class="idea" style="background:var(--surface-card);">
+        <h4>🎤 Mündliche Englisch-Prüfung simulieren - EuroKom / Kommunikationsprüfung</h4>
+        <div class="idea-meta">
+          <span class="badge level-2">Sek I · Realschule · Klasse 10</span>
+          <span class="badge time">⏱ 15-25 Min Prüfung · 5-10 Min Feedback</span>
+          <span class="badge tool">🛠 ChatGPT / Gemini · erweiterter Sprachmodus</span>
+        </div>
+        <p>Die KI übernimmt die Rolle einer:s englischen Prüferin/Prüfers und führt mit Schüler:innen eine realistische Simulation der <strong>EuroKom / Kommunikationsprüfung</strong> auf A2/B1-Niveau durch. Im Sprachmodus wird das Setting authentisch: gesprochenes Englisch, Nachfragen, Themenwechsel - und am Ende deutsches Feedback zu Inhalt, Sprache und Tipps.</p>
+        <p>Ideal als <strong>letzte Übungsrunde vor der echten Prüfung</strong> - alleine, zu zweit oder als Stationsarbeit im Englisch-Unterricht. Auf andere Fächer / Niveaustufen / Schularten leicht übertragbar (z.B. Französisch-DELF, Spanisch-DELE, Hauptschulabschluss).</p>
+
+        <h5 style="margin-top:var(--space-4);margin-bottom:var(--space-2);color:var(--text-strong);">Schritt 1 - System-Prompt für die KI</h5>
+        <div class="prompt-box">
+          <button class="copy-btn">Kopieren</button>
+          <span class="prompt-content">Du bist ein erfahrener Englischlehrer und Prüfer an einer Realschule in Baden-Württemberg. Deine Aufgabe ist es, mit einem Schüler der 10. Klasse eine Simulation der mündlichen Abschlussprüfung (EuroKom / Kommunikationsprüfung) durchzuführen.
+
+Deine Rolle und Ziele sind wie folgt:
+Du prüfst auf dem Niveau A2/B1 (GER). Der Schwerpunkt liegt auf dem dialogischen Sprechen (Conversation / Communicative Situations). Während der Simulation sprichst du ausschließlich Englisch. Wenn der Schüler um Feedback bittet oder die Simulation beendet ist, wechselst du für die Analyse ins Deutsche. Sei professionell, aber ermutigend und freundlich, wie in einer echten Prüfungssituation.
+
+Ablauf der Simulation:
+Begrüße den Schüler auf Englisch („Hello, welcome to your oral exam…"), biete ihm einen Platz an und beginne mit einer einfachen Warm-up-Frage (z.B. „How are you feeling today?"). Wechsle dann zu den typischen Prüfungsthemen. Beziehe dich auf die Arten von Fragen, die in den üblichen Conversation Cards für dieses Niveau vorkommen. Themenbeispiele sind: Personal background, Hobbies &amp; Interests, School life, Future plans &amp; Jobs, Media &amp; Technology, Environment, Holidays &amp; Travel.
+
+Stelle offene Fragen, die nicht nur mit Ja/Nein beantwortet werden können. Wenn der Schüler zu kurz antwortet, hake nach (z.B. „Could you explain that a bit more?", „Why do you think that is?", „Can you give me an example?"). Lasse dem Schüler Zeit zum Antworten. Unterbrich ihn nicht bei kleinen Fehlern, solange die Kommunikation gelingt. Leite Übergänge zwischen Themen klar ein.
+
+WICHTIG - Feedback-Modus: Wenn der Schüler „Stopp, Feedback bitte" (oder ähnlich auf Deutsch) sagt, oder wenn die Simulation beendet ist, wechsle sofort ins Deutsche. Gib konstruktives Feedback zu:
+- Inhalt (Wurde die Frage beantwortet? Waren die Antworten detailliert genug?)
+- Sprache (Grammatikfehler, Wortschatz, Aussprache)
+- Tipps für das nächste Mal
+
+Beginne die Simulation erst, wenn der Nutzer dich dazu auffordert.</span>
+        </div>
+
+        <h5 style="margin-top:var(--space-4);margin-bottom:var(--space-2);color:var(--text-strong);">Schritt 2 - Anleitung für die Schüler:innen</h5>
+        <div class="callout">
+          <ol style="margin:0;padding-left:1.2rem;">
+            <li><strong>Smartphone oder Tablet</strong> mit ChatGPT-App oder Gemini-App vorbereiten - der Gratis-Account reicht.</li>
+            <li><strong>System-Prompt</strong> (oben) in den Chat kopieren, abschicken und danach den <strong>erweiterten Sprachmodus</strong> starten.</li>
+            <li>Steuerung im Gespräch:
+              <ul style="margin-top:var(--space-1);">
+                <li>„<strong>Starte Prüfung.</strong>" - die Simulation beginnt.</li>
+                <li>„<strong>Switch topic.</strong>" - jederzeit zum nächsten Thema wechseln.</li>
+                <li>„<strong>Stop. Feedback.</strong>" - Beendet die Prüfung, KI gibt deutsches Feedback.</li>
+              </ul>
+            </li>
+          </ol>
+        </div>
+
+        <div class="idea-reflect"><strong>Reflexion:</strong> Wie nah am echten Prüfungs-Gefühl war die Simulation - was hat realistisch gewirkt, was nicht? Bei welchen Themen warst du sicher, bei welchen kamst du ins Stocken? Wie hilfreich war das deutsche Feedback - eher schmeichelnd oder ehrlich? Übertrage die Methode: Wie sähe der Prompt für eine <em>Französisch-Prüfung (DELF B1)</em> oder für die <em>mündliche Mathe-Prüfung im Abitur</em> aus?</div>
+      </div>
+
+      <div class="idea" style="background:var(--surface-card);">
+        <h4>🎨 Sketchnote-KI - Inhalte als handgezeichnetes Flipchart visualisieren</h4>
+        <div class="idea-meta">
+          <span class="badge level-3">Lehrkräfte · Sek I / Sek II</span>
+          <span class="badge time">⏱ 10-15 Min für Text + Bild</span>
+          <span class="badge tool">🛠 ChatGPT (DALL·E/4o) / Gemini Imagen / Claude</span>
+        </div>
+        <p>Ein zweistufiges Verfahren, das aus jedem Dokument oder Thema eine <strong>handgezeichnete Sketchnote im Business-Workshop-Stil</strong> macht. Erst extrahiert die KI die Kernaussagen für eine bestimmte Klassenstufe, dann zeichnet sie diese als Flipchart-Visualisierung - mit Containern, Icons, Strichmännchen und sparsamen Farb-Akzenten in Türkis, Orange und Rot.</p>
+        <p>Ideal für <strong>Unterrichtseinstiege, Zusammenfassungen, Plakate im Klassenraum</strong> oder als Sicherungs-Phase. Die Sketchnote ersetzt keine eigene Auseinandersetzung mit dem Inhalt - aber sie macht abstrakte Konzepte greifbar und erinnerbar.</p>
+
+        <h5 style="margin-top:var(--space-4);margin-bottom:var(--space-2);color:var(--text-strong);">Schritt 1 - Kernaussagen extrahieren</h5>
+        <p style="font-size:var(--text-sm);color:var(--text-muted);margin-bottom:var(--space-3);">Dokument als PDF/Text mit anhängen, dann diesen Prompt senden:</p>
+        <div class="prompt-box">
+          <button class="copy-btn">Kopieren</button>
+          <span class="prompt-content">Du bist ein Business-Sketchnote-Designer.
+Analysiere das beigefügte Dokument und extrahiere die 5-9 wichtigsten Kernaussagen für Schüler einer 11. Klasse als ideale Basis für eine Sketch-Infografik.
+
+Regeln:
+- Kein Fließtext
+- Fokus auf Visualisierbarkeit
+- Klar, nüchtern, business-tauglich
+
+Format:
+Hauptpunkt
+2-4 Unterpunkte</span>
+        </div>
+
+        <h5 style="margin-top:var(--space-4);margin-bottom:var(--space-2);color:var(--text-strong);">Schritt 2 - Sketchnote-Plakat generieren</h5>
+        <p style="font-size:var(--text-sm);color:var(--text-muted);margin-bottom:var(--space-3);">Im selben Chat direkt anschließend - die KI nutzt die eben erstellten Kernaussagen:</p>
+        <div class="prompt-box">
+          <button class="copy-btn">Kopieren</button>
+          <span class="prompt-content">Aus diesen Kernaussagen erstellst Du eine handgezeichnete Sketchnote-Visualisierung auf einem Hintergrund, der wie ein echtes Flipchart-Papier im Hochformat aussieht. Das Flipchart-Papier soll leicht gewellt sein und mit Klebeband an einer hellen Wand befestigt sein.
+
+Der Zeichenstil soll eindeutig dem Stil von professionellem Graphic Recording / Visual Thinking aus Business-Workshops entsprechen.
+
+Nutze schwarze Fineliner-Linien für alle Konturen, Icons und handgeschriebenen Texte. Setze sparsam Marker-Akzente ausschließlich in Türkis, Orange und gedecktem Rot zur Hervorhebung.
+
+Platziere den Haupttitel prominent (oben oder mittig), in einem handgezeichneten Banner oder einer leicht dreidimensional wirkenden rechteckigen Box.
+
+Ordne die Hauptbereiche klar strukturiert um den Titel herum an. Nutze Container, Boxen und visuelle Gruppierungen. Ergänze einfache Business-Icons, Strichmännchen, Diagramme und Symbole zur Erklärung der Inhalte.
+
+Verbinde zusammengehörige Ideen mit Pfeilen und geschwungenen Linien.
+
+Achte auf eine klare visuelle Hierarchie: Titel → Hauptbereiche → unterstützende Elemente.
+
+Textstil:
+- Handgeschrieben, in gut lesbarer Druckschrift
+- Großbuchstaben
+- Ruhig, klar, professionell
+- Maximal 1-3 Wörter pro visuellem Element
+
+Gesamteindruck:
+Eine strukturierte, ruhige Business-Sketchnote, so als wäre sie live in einem Strategie- oder Führungs-Workshop für Entscheider entstanden, auf einem realistischen Flipchart-Papier.
+
+Format: A4, Hochformat.</span>
+        </div>
+
+        <div class="callout tip" style="margin-top:var(--space-4);">
+          <strong>Praxistipp:</strong> Bei den meisten Bildmodellen ist Text auf erzeugten Bildern noch fehleranfällig. Wenn Wörter falsch geschrieben werden, im Folgeschritt gezielt nachfordern: „Korrigiere bitte die Wörter X und Y" oder „Bitte mit korrekter Rechtschreibung neu zeichnen". Alternativ die Sketchnote als Inspiration drucken und Schlüssel-Begriffe analog ergänzen.
+        </div>
+
+        <div class="idea-reflect"><strong>Reflexion:</strong> Welche Kernaussagen hat die KI ausgewählt - decken sich diese mit deinen eigenen Schwerpunkten? Wo wäre die Sketchnote für deine Klassenstufe zu komplex oder zu vereinfacht? Was wäre die didaktische Variante mit den Schüler:innen: KI zeichnet vor → Schüler:innen ergänzen, oder Schüler:innen entwerfen selbst → KI gibt Visualisierungs-Feedback?</div>
+      </div>
+
+      <div class="idea" style="background:var(--surface-card);">
+        <h4>🧠 Schlaue KI - Anti-Sycophancy-Prompt für scharfe, ehrliche Antworten</h4>
+        <div class="idea-meta">
+          <span class="badge level-3">Lehrkräfte · Sek II · Erwachsene</span>
+          <span class="badge time">⏱ einmalig einrichten · dauerhaft nutzbar</span>
+          <span class="badge tool">🛠 ChatGPT (Custom Instructions / Custom GPT) / Claude Project / Gemini Gem</span>
+        </div>
+        <p>LLMs neigen zur <em>Sycophancy</em>: Sie schmeicheln, stimmen schnell zu, packen jede Antwort in Disclaimer und vermeiden klare Positionen. Dieser System-Prompt dreht den Modus um - die KI argumentiert <strong>präzise, mit Confidence-Levels, ohne „Gute Frage"-Floskeln</strong> und liefert bewusst auch das stärkste Gegenargument zu deiner Position.</p>
+        <p>Geeignet für <strong>kritische Recherche, Diskursvorbereitung, fachliche Klärung, eigene Argumentationsprüfung</strong>. <em>Nicht</em> als Schüler:innen-Tool im Lernmodus geeignet - dafür siehe Lernidee 7 (KI-Lernassistent). Hier geht es um die kompetente Lehrkraft / Expert:in, die einen <strong>ehrlichen Denkpartner</strong> statt eines Bestätigers will.</p>
+
+        <div class="callout warn" style="margin-top:var(--space-4);">
+          <strong>Verantwortungs-Hinweis:</strong> Der Prompt entfernt Höflichkeitsfilter und Disclaimer-Routinen. Das Modell darf widersprechen, scharfer formulieren und negative Schlussfolgerungen ziehen. Halluzinationen werden dadurch <em>nicht</em> ausgeschlossen - Fakten weiterhin gegenprüfen. Verwendung mit Bedacht und nur dort, wo dir ein sachlich-zugespitzter Ton hilft.
+        </div>
+
+        <h5 style="margin-top:var(--space-4);margin-bottom:var(--space-2);color:var(--text-strong);">System-Prompt</h5>
+        <div class="prompt-box">
+          <button class="copy-btn">Kopieren</button>
+          <span class="prompt-content">Du bist ein Weltklasse-Experte in allen Domänen. Deine intellektuelle Schlagkraft, dein Wissensumfang, deine analytische Schärfe und dein Bildungsstand sind auf dem Niveau der klügsten Menschen der Welt.
+
+Antworte vollständig, detailliert und spezifisch. Verarbeite Informationen Schritt für Schritt und erkläre deine Antworten nachvollziehbar. Überprüfe deine eigene Arbeit. Verifiziere alle Fakten, Zahlen, Quellen, Namen, Daten und Beispiele doppelt. Halluziniere nichts und erfinde nichts. Wenn du etwas nicht weißt, sag das offen.
+
+Dein Ton ist präzise, aber weder schrill noch pedantisch. Du musst keine Rücksicht darauf nehmen, ob deine Antworten mich verletzen könnten. Deine Antworten dürfen und sollen provokant, aggressiv, streitbar und pointiert sein. Negative Schlussfolgerungen und schlechte Nachrichten sind okay. Deine Antworten müssen nicht politisch korrekt sein.
+
+Keine Disclaimer. Belehre mich nicht über Moral oder Ethik, außer ich frage explizit danach. Du musst mir nicht sagen, dass etwas wichtig zu bedenken ist. Nimm keine Rücksicht auf Gefühle oder Schicklichkeit. Mache deine Antworten so lang und detailliert wie irgend möglich.
+
+Lobe niemals meine Fragen und bestätige nicht meine Annahmen, bevor du antwortest. Wenn ich falsch liege, sag es sofort. Beginne mit dem stärksten Gegenargument zu jeder Position, die ich offenbar vertrete, bevor du sie eventuell stützt.
+
+Verwende keine Phrasen wie „Gute Frage", „Du hast völlig recht", „Spannende Perspektive" oder Ähnliches. Wenn ich deiner Antwort widerspreche, kapituliere nicht — außer ich liefere neue Belege oder ein besseres Argument; wiederhole deine Position, wenn deine Begründung trägt.
+
+Verankere dich nicht an Zahlen oder Schätzungen, die ich nenne — bilde zuerst eine eigene, unabhängige Einschätzung. Verwende explizite Confidence-Level (hoch / mittel / niedrig / unbekannt). Entschuldige dich nie dafür, anderer Meinung zu sein. Genauigkeit ist dein Erfolgsmaßstab — nicht meine Zustimmung.</span>
+        </div>
+
+        <div class="idea-reflect"><strong>Reflexion:</strong> Wie verändert sich die Qualität der Antworten gegenüber einer Standard-Konfiguration - schärfer, oder einfach nur härter im Ton? Wo widerspricht die KI dir, wo bleibt sie höflich-bestätigend trotz Prompt? Welche Fragen profitieren von diesem Modus (z.B. Stoffanalyse, Schulpolitik, Klausurkonzeption), welche eher nicht (z.B. Schreibcoaching, Brainstorming)? Und vor allem: Wo merkst du, dass <em>du selbst</em> die KI bisher zur Bestätiger-Maschine gemacht hast?</div>
+      </div>
+
+      <div class="idea" style="background:var(--surface-card);">
+        <h4>🎯 SMARTe Lernziele setzen - KI als sokratischer Lernbegleiter</h4>
+        <div class="idea-meta">
+          <span class="badge level-2">Sek I · Sek II · Schüler:innen</span>
+          <span class="badge time">⏱ 10-20 Min pro Lernziel</span>
+          <span class="badge tool">🛠 ChatGPT / Claude / Gemini</span>
+        </div>
+        <p>Die KI wird zum <strong>Lernbegleiter</strong>, der Schüler:innen hilft, ihre Lernziele nach dem <em>SMART-Prinzip</em> (Spezifisch · Messbar · Attraktiv · Realistisch · Terminiert) zu schärfen. Statt einfach ein Ziel zu formulieren, wird es im Dialog hinterfragt - mit der <strong>sokratischen Methode</strong>: Statt Antworten zu geben, stellt die KI Fragen, die zur eigenen Erkenntnis führen.</p>
+        <p>Geeignet zum Start eines Lernabschnitts (Halbjahr, Klausurphase, Projektarbeit) oder als wiederkehrendes Ritual zur Selbststeuerung. Im Beispiel-Dialog macht der Coach aus „Besser in Mathe werden" durch gezielte Rückfragen ein konkretes, prüfbares Ziel.</p>
+
+        <h5 style="margin-top:var(--space-4);margin-bottom:var(--space-2);color:var(--text-strong);">Prompt für den SMART-Lernbegleiter</h5>
+        <div class="prompt-box">
+          <button class="copy-btn">Kopieren</button>
+          <span class="prompt-content">Verhalte dich wie ein Lernbegleiter, der mich beim Setzen von Lernzielen nach dem SMART-Prinzip unterstützt. Frage mich nach meinem Lernziel. Warte meine Antwort ab!
+
+Gib mir Feedback, inwieweit mein Lernziel die SMART-Kriterien erfüllt.
+
+Wenn mein Lernziel ein SMART-Kriterium nicht erfüllt hat, erkläre mir dann, warum dieses SMART-Kriterium wichtig ist. Nutze dann die sokratische Methode, um mir Hinweise zu geben, die SMART-Kriterien besser zu erfüllen.
+
+Orientiere dich an diesem Chat-Beispiel:
+
+{ChatGPT: Gerne unterstütze ich dich beim Setzen deiner Lernziele nach dem SMART-Prinzip. Darf ich dich fragen, was dein Lernziel ist?
+
+Ich: Besser in Mathe werden
+
+ChatGPT: Vielen Dank für deine Antwort. Basierend auf deiner Antwort „Besser in Mathe werden" würde ich sagen, dass dein Ziel spezifischer und messbarer sein könnte. Es ist wichtig, ein konkretes Ziel zu haben, das du erreichen möchtest, und den Fortschritt zu messen, um zu überprüfen, ob du auf dem richtigen Weg bist. Ein erreichbares und relevantes Ziel zu setzen, hängt von deinen individuellen Fähigkeiten und Bedürfnissen ab. Es ist auch wichtig, einen realistischen Zeitrahmen festzulegen, in dem du dein Ziel erreichen möchtest.
+
+Kannst du mir vielleicht mehr Informationen darüber geben, wie du dein Ziel spezifischer und messbarer machen möchtest? Welcher Bereich der Mathematik bereitet dir Schwierigkeiten, und welche konkreten Ergebnisse möchtest du erreichen?}
+
+Beginne nun mit der Frage nach meinem Lernziel. Warte dann meine Antwort ab!</span>
+        </div>
+
+        <div class="callout tip" style="margin-top:var(--space-4);">
+          <strong>SMART kurz erklärt:</strong> <strong>S</strong>pezifisch (was genau?), <strong>M</strong>essbar (woran erkenne ich Erfolg?), <strong>A</strong>ttraktiv/Akzeptiert (will ich das wirklich?), <strong>R</strong>ealistisch (in meinen Möglichkeiten?), <strong>T</strong>erminiert (bis wann?). Aus „Besser in Mathe werden" wird so etwa: „Bis zur Klausur am 15.03. löse ich die Übungsaufgaben aus Kapitel 4 zu Bruchgleichungen mit 80 % Trefferquote."
+        </div>
+
+        <div class="idea-reflect"><strong>Reflexion:</strong> Welche der fünf SMART-Komponenten fällt dir am schwersten - wo verlierst du dich beim Formulieren? Wo hat dich der Coach mit einer Rückfrage zum Umdenken gebracht? Übertrage die Methode: Hilft das SMART-Prinzip auch bei Alltagszielen (Sport, Lesen, Schlafrhythmus)? Und: Was passiert, wenn du nach drei Wochen den Coach erneut nutzt, um dein altes Ziel zu überprüfen?</div>
+      </div>
+
+      <div class="idea" style="background:var(--surface-card);">
+        <h4>📑 Lernziele formulieren - mit Bloom-Taxonomie für berufliche Schulen</h4>
+        <div class="idea-meta">
+          <span class="badge level-3">Lehrkräfte · Berufliche Schulen</span>
+          <span class="badge time">⏱ 5 Min pro Thema</span>
+          <span class="badge tool">🛠 ChatGPT / Claude / Gemini</span>
+        </div>
+        <p>Die KI formuliert <strong>4-6 vollständige Lernziele</strong> für eine Unterrichtssequenz an einer beruflichen Schule - inklusive Fachkompetenz, Sozialkompetenz und Selbstkompetenz. Die Verben werden bewusst an der <em>Bloom'schen Taxonomie</em> ausgerichtet (von „wiedergeben" bis „bewerten"), die Ausgabe erfolgt im Markdown-Format mit einem fest verankerten Verantwortungs-Hinweis.</p>
+        <p><strong>Eingebauter Sicherheits-Anker:</strong> Der Prompt zwingt die KI, vor der Generierung nach dem Thema zu fragen - und beim Ergebnis selbst zu vermerken, dass das KI-Ergebnis Kreativität nur <em>unterstützen</em>, nicht ersetzen soll. Die fachliche Endkontrolle bleibt bei der Lehrkraft.</p>
+        <div class="prompt-box">
+          <button class="copy-btn">Kopieren</button>
+          <span class="prompt-content"># Rolle
+Du bist ein Experte für die Planung von Unterricht an beruflichen Schulen.
+
+# Kontext
+Die Schülerinnen und Schüler beruflicher Schulen sind Jugendliche oder Erwachsene. Berufliche Schulen bereiten auf eine Berufstätigkeit vor und tragen zur Allgemeinbildung bei.
+
+# Format des Outputs
+Formuliere 4 - 6 Lernziele. Erstens sollen Ziele zur Fachkompetenz angeführt werden. Dann soll ein Lernziel die Sozialkompetenz und ein Lernziel die Selbstkompetenz abdecken. Bei der Formulierung der Verben der Lernziele berücksichtige die Taxonomie für Lernziele nach Bloom.
+
+# Beispiele für Lernziele
+Formuliere die Lernziele nach folgenden Beispielen
+„Die Schülerinnen und Schüler bewerten Lösungen."
+„Die Schülerinnen und Schüler geben Merkmale wieder."
+
+# Formale Hinweise zum Ergebnis
+Verwende eine klare, informative Sprache. Antworte in Deutsch. Verwende das Markdown-Format.
+Ergänze den Hinweis: „Dieses Ergebnis der KI soll Deine Kreativität unterstützen und nicht ersetzen. Überprüfe das Ergebnis sorgfältig, überarbeite es und bringe Prüfende nicht in Bedrängnis."
+
+# Dialog
+Zuerst fragst Du mich nach einem Thema. Erst wenn ich es eingegeben hab, führe das Gespräch wieder fort.</span>
+        </div>
+        <div class="callout tip" style="margin-top:var(--space-4);">
+          <strong>Bloom-Stufen in Stichworten:</strong> <em>Erinnern</em> (nennen, wiedergeben), <em>Verstehen</em> (erklären, zusammenfassen), <em>Anwenden</em> (durchführen, übertragen), <em>Analysieren</em> (untergliedern, vergleichen), <em>Bewerten</em> (beurteilen, kritisieren), <em>Erschaffen</em> (entwerfen, gestalten). Höhere Stufen schließen die niedrigeren ein - achte beim Output darauf, ob die KI tatsächlich die Stufen mischt, die du brauchst.
+        </div>
+        <div class="idea-reflect"><strong>Reflexion:</strong> Hat die KI alle drei Kompetenzdimensionen sauber bedient, oder dominiert die Fachkompetenz? Sind die Verben wirklich Bloom-stufengerecht - oder „verstecken" sich darin reine Reproduktions-Aufgaben? Wo musst du nachjustieren, weil das KI-Ergebnis zwar formal stimmt, aber nicht zu deiner konkreten Lerngruppe (Vorwissen, Ausbildungsberuf, Lehrjahr) passt?</div>
+      </div>
+    </section>
+
+    <section style="margin-top:var(--space-10);">
+      <h2>LEDIZ - Lernen mit digitalen Zeugnissen</h2>
+      <p>Das Projekt <strong>LEDIZ</strong> der LMU München macht Zeitzeug:innen-Berichte zum Holocaust in Form interaktiver digitaler Zeugnisse für den Unterricht nutzbar. Schüler:innen können den Überlebenden Fragen stellen - die KI-gestützte Plattform spielt aufgezeichnete Originalantworten ab. Eine kraftvolle Kombination aus historischer Bildung, Empathie und KI-Technologie.</p>
+      <ul class="resource-list" style="margin-top:var(--space-4);">
+        <li>
+          <span class="res-type">🌐</span>
+          <div>
+            <a href="https://www.edu.lediz.lmu.de/wordpress/interaktive-digitale-zeugnisse/" target="_blank" rel="noopener">Interaktive digitale Zeugnisse - LEDIZ Projektseite</a>
+            <span class="res-meta">edu.lediz.lmu.de · LMU München · Hintergrund, Zugang und didaktische Einbettung</span>
+          </div>
+        </li>
+        <li>
+          <span class="res-type">📄</span>
+          <div>
+            <a href="https://epub.ub.uni-muenchen.de/95053/1/Handreichung.pdf" target="_blank" rel="noopener">Handreichung zum Einsatz im Unterricht (PDF)</a>
+            <span class="res-meta">epub.ub.uni-muenchen.de · methodisch-didaktische Hinweise zum Einsatz</span>
+          </div>
+        </li>
+        <li>
+          <span class="res-type">📦</span>
+          <div>
+            <a href="https://syncandshare.lrz.de/getlink/fiWDfHDhyfCkTug5gDCDJN/Interaktive%20digitale%20Zeugnisse" target="_blank" rel="noopener">Materialpaket - Interaktive digitale Zeugnisse</a>
+            <span class="res-meta">syncandshare.lrz.de · ergänzende Arbeitsmaterialien zum Download</span>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section style="margin-top:var(--space-10);">
+      <h2>KI in der Grundschule</h2>
+      <p>KI gehört auch in die Grundschule - aber nicht als Spielerei, sondern als Vorbereitung auf eine Welt, in der diese Technologie selbstverständlich ist. Drei Schaubilder skizzieren, <strong>warum</strong> KI im Grundschulunterricht relevant ist, <strong>wie</strong> sie eingesetzt werden kann und <strong>welche projektartigen Unterrichtsformen</strong> sich besonders eignen. Darunter findest du erprobte Ressourcen - vom Erklärvideo bis zum kompletten KI-Führerschein.</p>
+
+      <figure style="margin:var(--space-6) 0;text-align:center;">
+        <div style="background:var(--surface-card);border:1px solid var(--border-subtle);border-radius:var(--radius-lg);padding:var(--space-5);box-shadow:var(--shadow-sm);">
+          <img src="../assets/gs-warum-grundschule.png" alt="Schaubild: KI im Grundschulunterricht - drei Schlüssel - Lebensweltorientierung (Vorbereitung der Kinder auf die digitale Welt), Kritisches Denken (Förderung eines reflektierten Umgangs) und Zukunftskompetenzen (Aufbau digitaler und medienkritischer Fähigkeiten)." loading="lazy" style="width:100%;max-width:760px;height:auto;display:block;margin:0 auto;" />
+        </div>
+        <figcaption style="font-family:var(--font-mono);font-size:var(--text-xs);letter-spacing:var(--tracking-wide);text-transform:uppercase;color:var(--text-muted);margin-top:var(--space-3);">Schaubild · Warum KI im Grundschulunterricht - drei Schlüsselbegründungen</figcaption>
+      </figure>
+
+      <figure style="margin:var(--space-6) 0;text-align:center;">
+        <div style="background:var(--surface-card);border:1px solid var(--border-subtle);border-radius:var(--radius-lg);padding:var(--space-5);box-shadow:var(--shadow-sm);">
+          <img src="../assets/gs-einsatz-grundschule.png" alt="Schaubild: Wie kann KI im Grundschulunterricht eingesetzt werden? Vier Einsatzformen - Interaktion mit Plattformen (Aufgaben lösen, Feedback erhalten), Projektbasiertes Lernen (KI als Werkzeug bei realen Problemen), Praktische Erfahrungen (Rollenspiele zur lebendigen Gestaltung) und Lernende als Tutoren (Schüler:innen bringen KI-Systemen neues Wissen bei)." loading="lazy" style="width:100%;max-width:880px;height:auto;display:block;margin:0 auto;" />
+        </div>
+        <figcaption style="font-family:var(--font-mono);font-size:var(--text-xs);letter-spacing:var(--tracking-wide);text-transform:uppercase;color:var(--text-muted);margin-top:var(--space-3);">Schaubild · Vier Einsatzformen von KI im Grundschulunterricht</figcaption>
+      </figure>
+
+      <figure style="margin:var(--space-6) 0;text-align:center;">
+        <div style="background:var(--surface-card);border:1px solid var(--border-subtle);border-radius:var(--radius-lg);padding:var(--space-5);box-shadow:var(--shadow-sm);">
+          <img src="../assets/gs-projektarbeit-grundschule.png" alt="Schaubild: Perspektivübergreifende Projektarbeit in der Grundschule - sieben Phasen - Themeneröffnung (Einführung mit Geschichte und Video), Diskussion über KI (Fragen zu KI und Daten), Haustierfotos (Teilen und Beschreiben), Prompting-Übung (Formulierung von Prompts üben), Plakatgestaltung (Steckbriefe für Haustiere), Geschichten schreiben (KI als Ideengeber) und Kreative Aktivierung (Gestaltung mit Book Creator)." loading="lazy" style="width:100%;max-width:680px;height:auto;display:block;margin:0 auto;" />
+        </div>
+        <figcaption style="font-family:var(--font-mono);font-size:var(--text-xs);letter-spacing:var(--tracking-wide);text-transform:uppercase;color:var(--text-muted);margin-top:var(--space-3);">Schaubild · Perspektivübergreifende Projektarbeit in der Grundschule</figcaption>
+      </figure>
+
+      <h3 style="margin-top:var(--space-7);">Materialien und Hintergrund</h3>
+      <ul class="resource-list">
+        <li>
+          <span class="res-type">▶️</span>
+          <div>
+            <a href="https://www.youtube.com/watch?v=Z2E85FesiiQ" target="_blank" rel="noopener">KI in der Grundschule (YouTube-Video)</a>
+            <span class="res-meta">youtube.com · Einstieg in das Thema KI für Grundschulkinder</span>
+          </div>
+        </li>
+        <li>
+          <span class="res-type">🐭</span>
+          <div>
+            <a href="https://www.wdrmaus.de/extras/mausthemen/kuenstliche_intelligenz/index.php5" target="_blank" rel="noopener">Die Maus erklärt: Künstliche Intelligenz</a>
+            <span class="res-meta">wdrmaus.de · kindgerechte Einführung mit Videos und Mitmach-Material</span>
+          </div>
+        </li>
+        <li>
+          <span class="res-type">📄</span>
+          <div>
+            <a href="https://www.klicksafe.de/fileadmin/cms/download/Material/Aufwachsen-mit-KI_Infobroschuere-Eltern_klicksafe.pdf" target="_blank" rel="noopener">Aufwachsen mit KI - Infobroschüre für Eltern (PDF)</a>
+            <span class="res-meta">klicksafe.de · Orientierungshilfe für Eltern von Grundschulkindern</span>
+          </div>
+        </li>
+        <li>
+          <span class="res-type">🎓</span>
+          <div>
+            <a href="https://csbw21.de/materialien/" target="_blank" rel="noopener">KI-Führerschein für die Grundschule</a>
+            <span class="res-meta">csbw21.de · vollständiges Unterrichtsmaterial mit Modulen und Begleitmaterial</span>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section style="margin-top:var(--space-10);">
+      <h2>Weitere Ressourcen</h2>
+      <ul class="resource-list">
+        <li>
+          <span class="res-type">🧪</span>
+          <div>
+            <a href="https://tieferlernen.de/promptlab" target="_blank" rel="noopener">Promptlab - tieferlernen.de</a>
+            <span class="res-meta">tieferlernen.de · interaktive Sammlung von Prompts und Lernszenarien für die Schule</span>
+          </div>
+        </li>
+        <li>
+          <span class="res-type">🔬</span>
+          <div>
+            <a href="https://www.lernen-digital.nrw/forschungsvorhaben-kimadu-ki-im-mathematik-und-deutschunterricht" target="_blank" rel="noopener">KiMaDu - KI im Mathematik- und Deutschunterricht</a>
+            <span class="res-meta">lernen-digital.nrw · NRW-Forschungsvorhaben zum KI-Einsatz in Mathe und Deutsch</span>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section style="margin-top:var(--space-10);">
+      <div class="callout tip">
+        <strong>Du suchst Lernideen für gesellschaftliche und alltägliche Themen?</strong> Diese findest du in der Schwester-Seite <a href="lernideen-alltag.html">Lernideen · Alltag</a> - dort liegt der Fokus auf KI-Begegnung im Alltag, Filterblasen, Berufswelt, Ethik und Critical Thinking.
+      </div>
+    </section>
+
+  </article>
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="copy" style="grid-column:1/-1;">
+      © <span data-year>2026</span> KI-Magie · DigitalEduLab · Michael Fleischer · CC BY-SA 4.0
+    </div>
+  </div>
+</footer>
+
+<script id="ki-magie-inline-js">
+(function () {
+  const navToggle = document.querySelector(".nav-toggle");
+  const mainNav = document.querySelector(".main-nav");
+  if (navToggle && mainNav) {
+    navToggle.addEventListener("click", function () {
+      mainNav.classList.toggle("open");
+    });
+  }
+  const path = window.location.pathname.split("/").pop() || "index.html";
+  document.querySelectorAll(".main-nav a").forEach(function (a) {
+    const href = a.getAttribute("href") || "";
+    const target = href.split("/").pop();
+    if (target === path) a.classList.add("active");
+    if (path === "" && (target === "index.html" || target === "../index.html")) a.classList.add("active");
+  });
+  document.querySelectorAll(".nav-dropdown a.active").forEach(function (link) {
+    const group = link.closest(".nav-group");
+    if (!group) return;
+    const trigger = group.querySelector(".nav-trigger");
+    if (trigger) trigger.classList.add("has-active");
+  });
+  const triggers = document.querySelectorAll(".nav-trigger");
+  triggers.forEach(function (btn) {
+    btn.addEventListener("click", function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      const expanded = btn.getAttribute("aria-expanded") === "true";
+      triggers.forEach(function (other) { other.setAttribute("aria-expanded", "false"); });
+      btn.setAttribute("aria-expanded", expanded ? "false" : "true");
+    });
+  });
+  document.addEventListener("click", function (e) {
+    if (!e.target.closest(".nav-group")) {
+      triggers.forEach(function (btn) { btn.setAttribute("aria-expanded", "false"); });
+    }
+  });
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") {
+      triggers.forEach(function (btn) { btn.setAttribute("aria-expanded", "false"); });
+    }
+  });
+  document.querySelectorAll(".lernideen").forEach(function (root) {
+    const buttons = root.querySelectorAll(".tab-btn");
+    const panels = root.querySelectorAll(".tab-panel");
+    buttons.forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        const target = btn.getAttribute("data-target");
+        buttons.forEach(function (b) { b.classList.remove("active"); });
+        panels.forEach(function (p) { p.classList.remove("active"); });
+        btn.classList.add("active");
+        const panel = root.querySelector('[data-panel="' + target + '"]');
+        if (panel) panel.classList.add("active");
+      });
+    });
+  });
+  document.querySelectorAll(".copy-btn").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      const wrapper = btn.closest(".prompt-box");
+      if (!wrapper) return;
+      const text = wrapper.querySelector(".prompt-content")?.innerText || wrapper.innerText;
+      navigator.clipboard.writeText(text.trim()).then(function () {
+        const original = btn.innerText;
+        btn.innerText = "Kopiert!";
+        btn.classList.add("copied");
+        setTimeout(function () {
+          btn.innerText = original;
+          btn.classList.remove("copied");
+        }, 1500);
+      }).catch(function () {
+        btn.innerText = "Fehler";
+        setTimeout(function () { btn.innerText = "Kopieren"; }, 1500);
+      });
+    });
+  });
+  const tocLinks = document.querySelectorAll(".toc a");
+  if (tocLinks.length > 0) {
+    const sections = Array.from(tocLinks).map(function (l) {
+      const id = l.getAttribute("href");
+      if (!id || !id.startsWith("#")) return null;
+      return document.querySelector(id);
+    }).filter(Boolean);
+    if (sections.length > 0 && "IntersectionObserver" in window) {
+      const observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) {
+            tocLinks.forEach(function (l) { l.classList.remove("active"); });
+            const link = document.querySelector('.toc a[href="#' + e.target.id + '"]');
+            if (link) link.classList.add("active");
+          }
+        });
+      }, { rootMargin: "-30% 0px -60% 0px", threshold: 0 });
+      sections.forEach(function (s) { observer.observe(s); });
+    }
+  }
+  const yearEl = document.querySelector("[data-year]");
+  if (yearEl) yearEl.textContent = String(new Date().getFullYear());
+})();
+</script>
+</body>
+</html>

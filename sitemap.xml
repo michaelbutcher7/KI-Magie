@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>./index.html</loc><changefreq>monthly</changefreq><priority>1.0</priority></url>
+  <url><loc>./pages/01-ki-im-alltag.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>./pages/02-ai-literacy-lehrende.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>./pages/03-ai-literacy-lernende.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>./pages/04-technologiewissen.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>./pages/05-praktische-anwendung.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>./pages/06-potenziale-bildung.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>./pages/07-potenziale-alltag.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>./pages/08-ethik-zukunft.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>./pages/09-didaktischer-einsatz.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>./pages/10-einfuehrung-unterricht.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>./pages/11-datenschutz.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+</urlset>

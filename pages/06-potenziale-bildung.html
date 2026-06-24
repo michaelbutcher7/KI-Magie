@@ -1,0 +1,1416 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>06 · Potenziale &amp; Herausforderungen in der Bildung | KI-Magie</title>
+  <meta name="description" content="Chancen und Grenzen von KI für Lehr-Lern-Prozesse - mit niveaudifferenzierten Übungen." />
+  <meta name="theme-color" content="#097EB5" />
+  <meta name="author" content="Michael Fleischer" />
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="../assets/favicon.svg" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="06 · Potenziale &amp; Herausforderungen in der Bildung | KI-Magie" />
+  <meta property="og:description" content="Chancen und Grenzen von KI für Lehr-Lern-Prozesse - mit niveaudifferenzierten Übungen." />
+  <meta property="og:image" content="../assets/og-image.svg" />
+  <meta property="og:locale" content="de_DE" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="06 · Potenziale &amp; Herausforderungen in der Bildung | KI-Magie" />
+  <meta name="twitter:description" content="Chancen und Grenzen von KI für Lehr-Lern-Prozesse - mit niveaudifferenzierten Übungen." />
+  <meta name="twitter:image" content="../assets/og-image.svg" />
+  <style id="ki-magie-inline">
+:root {
+  --blue-50:#ECF6FC; --blue-100:#D2ECF7; --blue-200:#A6D8ED; --blue-300:#6FC0E1;
+  --blue-400:#2FA1D2; --blue-500:#097EB5; --blue-600:#086B9C; --blue-700:#08567C;
+  --blue-800:#0A4360; --blue-900:#0B3347;
+  --teal-50:#E8F8F5; --teal-100:#C7EFE8; --teal-200:#8FDFD2; --teal-300:#4FCBB8;
+  --teal-400:#1FB6A0; --teal-500:#109684; --teal-600:#0C7A6C; --teal-700:#0A5F55;
+  --coral-50:#FDEEE8; --coral-100:#FAD7C8; --coral-200:#F6B59A; --coral-300:#F28D66;
+  --coral-400:#EE6F41; --coral-500:#DC5A2C; --coral-600:#B9461F;
+  --white:#FFFFFF;
+  --slate-50:#F6F9FB; --slate-100:#EDF2F6; --slate-200:#DCE5EC; --slate-300:#C2D0DB;
+  --slate-400:#93A6B4; --slate-500:#687C8B; --slate-600:#4A5C6A; --slate-700:#334451;
+  --slate-800:#1C2C38; --slate-900:#0C1A24;
+  --success-50:#E7F6EE; --success-500:#1F9D6B;
+  --warning-50:#FCF3E2; --warning-500:#E8A317;
+  --danger-50:#FBEAEA;  --danger-500:#D64545;
+  --brand:var(--blue-500); --brand-hover:var(--blue-600); --brand-active:var(--blue-700);
+  --brand-subtle:var(--blue-50); --brand-ink:var(--blue-800);
+  --secondary:var(--teal-400); --secondary-ink:var(--teal-700);
+  --accent:var(--coral-400); --accent-hover:var(--coral-500);
+  --text-strong:var(--slate-900); --text-body:var(--slate-700);
+  --text-muted:var(--slate-500); --text-faint:var(--slate-400);
+  --text-on-brand:var(--white); --text-link:var(--blue-600);
+  --surface-page:var(--white); --surface-sunken:var(--slate-50);
+  --surface-card:var(--white); --surface-inverse:var(--slate-900);
+  --surface-brand:var(--blue-500);
+  --border-subtle:var(--slate-200); --border-default:var(--slate-300);
+  --border-strong:var(--slate-400); --border-brand:var(--blue-500);
+  --ring:color-mix(in srgb, var(--blue-500) 45%, transparent);
+  --color-primary:var(--blue-500); --color-primary-dark:var(--blue-700);
+  --color-primary-light:var(--blue-400);
+  --color-accent:var(--coral-400); --color-accent-dark:var(--coral-500);
+  --color-secondary:var(--teal-400); --color-secondary-light:var(--teal-300);
+  --color-bg:var(--slate-50); --color-surface:var(--white);
+  --color-surface-alt:var(--slate-100);
+  --color-text:var(--slate-700); --color-text-muted:var(--slate-500);
+  --color-border:var(--slate-200);
+  --font-display:"Aptos Display","Aptos",system-ui,-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;
+  --font-sans:"Aptos",system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  --font-mono:"Aptos Mono","Cascadia Mono",ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+  --fw-regular:400; --fw-medium:500; --fw-semibold:600; --fw-bold:700; --fw-extra:800;
+  --text-xs:0.75rem; --text-sm:0.875rem; --text-base:1rem; --text-md:1.125rem;
+  --text-lg:1.375rem; --text-xl:1.75rem; --text-2xl:2.25rem; --text-3xl:2.875rem;
+  --text-4xl:3.75rem; --text-5xl:4.75rem;
+  --leading-tight:1.08; --leading-snug:1.25; --leading-normal:1.5; --leading-relaxed:1.65;
+  --tracking-tight:-0.02em; --tracking-snug:-0.01em; --tracking-normal:0;
+  --tracking-wide:0.02em; --tracking-caps:0.08em;
+  --space-1:0.25rem; --space-2:0.5rem; --space-3:0.75rem; --space-4:1rem;
+  --space-5:1.5rem; --space-6:2rem; --space-7:2.5rem; --space-8:3rem;
+  --space-10:4rem; --space-12:5rem; --space-16:8rem;
+  --radius-xs:4px; --radius-sm:6px; --radius-md:10px; --radius-lg:16px;
+  --radius-xl:24px; --radius-pill:999px;
+  --shadow-xs:0 1px 2px rgba(12,26,36,0.06);
+  --shadow-sm:0 1px 3px rgba(12,26,36,0.08),0 1px 2px rgba(12,26,36,0.04);
+  --shadow-md:0 4px 12px rgba(12,26,36,0.08),0 2px 4px rgba(12,26,36,0.05);
+  --shadow-lg:0 12px 28px rgba(12,26,36,0.12),0 4px 8px rgba(12,26,36,0.06);
+  --shadow-xl:0 24px 56px rgba(12,26,36,0.16);
+  --shadow-brand:0 10px 28px rgba(9,126,181,0.28);
+  --container:1200px; --container-narrow:760px;
+  --ease-out:cubic-bezier(0.22,1,0.36,1);
+  --ease-in-out:cubic-bezier(0.65,0,0.35,1);
+  --dur-fast:120ms; --dur-base:200ms; --dur-slow:360ms;
+}
+*,*::before,*::after { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body {
+  margin:0;
+  font-family:var(--font-sans);
+  font-size:var(--text-base);
+  line-height:var(--leading-normal);
+  color:var(--text-body);
+  background:var(--surface-page);
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+img { max-width:100%; height:auto; display:block; }
+a {
+  color:var(--text-link);
+  text-decoration:none;
+  transition:color var(--dur-fast) var(--ease-out);
+}
+a:hover { color:var(--brand-active); }
+::selection { background:var(--blue-200); color:var(--slate-900); }
+h1,h2,h3,h4 {
+  font-family:var(--font-display);
+  color:var(--text-strong);
+  font-weight:var(--fw-semibold);
+  letter-spacing:var(--tracking-tight);
+  line-height:var(--leading-tight);
+  margin:0;
+  text-wrap:balance;
+}
+h1 { font-size:clamp(2.25rem,4.5vw,3.75rem); font-weight:var(--fw-bold); }
+h2 { font-size:clamp(1.5rem,2.6vw,2.25rem); }
+h3 { font-size:var(--text-lg); }
+h4 { font-size:var(--text-md); color:var(--brand-ink); }
+p { text-wrap:pretty; margin:0 0 var(--space-4); }
+.container { max-width:var(--container); margin:0 auto; padding:0 var(--space-5); }
+.eyebrow, .dse-eyebrow {
+  font-family:var(--font-mono);
+  font-size:var(--text-xs);
+  font-weight:var(--fw-medium);
+  letter-spacing:var(--tracking-caps);
+  text-transform:uppercase;
+  color:var(--brand);
+}
+.site-header {
+  position:sticky; top:0; z-index:100;
+  background:rgba(255,255,255,0.92);
+  backdrop-filter:blur(10px) saturate(140%);
+  border-bottom:1px solid var(--border-subtle);
+}
+.site-header .container {
+  display:flex; align-items:center; justify-content:space-between;
+  height:72px;
+}
+.brand { display:flex; align-items:center; gap:0.7rem; text-decoration:none; }
+.brand-logo {
+  width:44px; height:44px;
+  border-radius:var(--radius-md);
+  background:linear-gradient(135deg,var(--blue-700),var(--blue-500) 55%,var(--teal-500));
+  display:grid; place-items:center;
+  color:#fff; font-weight:var(--fw-bold);
+  box-shadow:var(--shadow-sm);
+  position:relative; overflow:hidden;
+}
+.brand-logo::after {
+  content:""; position:absolute; inset:-50%;
+  background:radial-gradient(circle at 30% 30%,rgba(255,255,255,0.35),transparent 60%);
+}
+.brand-logo span {
+  position:relative; z-index:1;
+  font-family:var(--font-display);
+  font-size:1rem; letter-spacing:-0.02em;
+}
+.brand-name {
+  font-family:var(--font-display);
+  font-weight:var(--fw-bold);
+  color:var(--text-strong);
+  font-size:1.05rem;
+  letter-spacing:var(--tracking-snug);
+  line-height:1.15;
+}
+.brand-name small {
+  display:block;
+  font-family:var(--font-mono);
+  font-size:0.65rem;
+  font-weight:var(--fw-medium);
+  color:var(--text-muted);
+  letter-spacing:var(--tracking-caps);
+  text-transform:uppercase;
+  margin-top:2px;
+}
+.nav-toggle {
+  display:none;
+  background:none; border:0; cursor:pointer;
+  width:40px; height:40px;
+  border-radius:var(--radius-sm);
+  align-items:center; justify-content:center;
+}
+.nav-toggle span { display:block; width:22px; height:2px; background:var(--text-strong); position:relative; }
+.nav-toggle span::before,.nav-toggle span::after {
+  content:""; position:absolute; left:0; width:22px; height:2px; background:var(--text-strong);
+}
+.nav-toggle span::before { top:-7px; }
+.nav-toggle span::after  { top:7px; }
+.main-nav { display:flex; gap:var(--space-1); }
+.main-nav a {
+  color:var(--text-body);
+  font-weight:var(--fw-medium);
+  font-size:var(--text-sm);
+  padding:0.55rem 0.9rem;
+  border-radius:var(--radius-md);
+  transition:background var(--dur-fast) var(--ease-out), color var(--dur-fast) var(--ease-out);
+}
+.main-nav a:hover { background:var(--brand-subtle); color:var(--brand-ink); }
+.main-nav a.active { background:var(--brand); color:var(--white); }
+.nav-group { position:relative; display:inline-flex; }
+.nav-trigger {
+  background:none; border:0; cursor:pointer;
+  color:var(--text-body);
+  font-family:inherit;
+  font-weight:var(--fw-medium);
+  font-size:var(--text-sm);
+  padding:0.55rem 0.9rem;
+  border-radius:var(--radius-md);
+  display:inline-flex; align-items:center; gap:6px;
+  transition:background var(--dur-fast) var(--ease-out), color var(--dur-fast) var(--ease-out);
+}
+.nav-trigger:hover, .nav-trigger[aria-expanded="true"] {
+  background:var(--brand-subtle); color:var(--brand-ink);
+}
+.nav-trigger.has-active { background:var(--brand); color:var(--white); }
+.nav-trigger .chev {
+  display:inline-block;
+  transition:transform var(--dur-fast) var(--ease-out);
+  font-size:0.7em; opacity:0.7;
+}
+.nav-trigger[aria-expanded="true"] .chev { transform:rotate(180deg); }
+.nav-dropdown {
+  position:absolute; top:calc(100% + 6px); left:0;
+  min-width:200px;
+  background:var(--surface-card);
+  border:1px solid var(--border-subtle);
+  border-radius:var(--radius-md);
+  box-shadow:var(--shadow-lg);
+  padding:var(--space-2);
+  opacity:0; visibility:hidden;
+  transform:translateY(-4px);
+  transition:opacity var(--dur-fast) var(--ease-out),
+             transform var(--dur-fast) var(--ease-out),
+             visibility var(--dur-fast) var(--ease-out);
+  z-index:200;
+}
+.nav-group:hover > .nav-dropdown,
+.nav-group:focus-within > .nav-dropdown,
+.nav-trigger[aria-expanded="true"] + .nav-dropdown {
+  opacity:1; visibility:visible; transform:translateY(0);
+}
+.nav-dropdown a {
+  display:block;
+  padding:0.55rem 0.75rem;
+  color:var(--text-body);
+  border-radius:var(--radius-sm);
+  font-size:var(--text-sm);
+  font-weight:var(--fw-medium);
+  text-decoration:none;
+  transition:background var(--dur-fast) var(--ease-out), color var(--dur-fast) var(--ease-out);
+}
+.nav-dropdown a:hover { background:var(--brand-subtle); color:var(--brand-ink); }
+.nav-dropdown a.active { background:var(--brand); color:var(--white); }
+@media (max-width:980px) {
+  .nav-toggle { display:inline-flex; }
+  .main-nav {
+    position:absolute; top:72px; left:0; right:0;
+    background:#fff;
+    border-bottom:1px solid var(--border-subtle);
+    flex-direction:column;
+    padding:var(--space-3) var(--space-4) var(--space-4);
+    gap:var(--space-1);
+    transform:translateY(-110%);
+    transition:transform var(--dur-base) var(--ease-out);
+    box-shadow:var(--shadow-md);
+  }
+  .main-nav.open { transform:translateY(0); }
+  .main-nav a { padding:0.7rem 0.85rem; }
+  .nav-group { width:100%; flex-direction:column; align-items:stretch; }
+  .nav-trigger { width:100%; justify-content:space-between; padding:0.7rem 0.85rem; }
+  .nav-dropdown {
+    position:static;
+    opacity:1; visibility:visible; transform:none;
+    box-shadow:none; border:0;
+    padding:0 0 var(--space-2) var(--space-4);
+    background:transparent;
+    display:none; min-width:0;
+  }
+  .nav-group:hover > .nav-dropdown { display:none; }
+  .nav-trigger[aria-expanded="true"] + .nav-dropdown { display:block; }
+}
+.hero {
+  position:relative;
+  color:var(--white);
+  padding:var(--space-12) 0 var(--space-16);
+  overflow:hidden;
+  background:linear-gradient(135deg,var(--blue-700) 0%,var(--blue-500) 50%,var(--teal-500) 100%);
+}
+.hero::before {
+  content:""; position:absolute; inset:0; pointer-events:none;
+  background-image:radial-gradient(rgba(255,255,255,0.14) 1px,transparent 1.4px);
+  background-size:18px 18px;
+  mask-image:linear-gradient(180deg,rgba(0,0,0,1) 0%,rgba(0,0,0,0.6) 60%,rgba(0,0,0,0) 100%);
+}
+.hero::after {
+  content:""; position:absolute; pointer-events:none;
+  top:-20%; right:-10%; width:60%; height:120%;
+  background:radial-gradient(circle,rgba(192,239,232,0.35),transparent 60%);
+}
+.hero .container { position:relative; z-index:2; }
+.hero h1 {
+  color:var(--white);
+  font-size:clamp(2.25rem,5vw,4.25rem);
+  max-width:880px;
+  letter-spacing:var(--tracking-tight);
+}
+.hero .lead {
+  font-size:var(--text-md);
+  max-width:680px;
+  color:rgba(255,255,255,0.92);
+  margin:var(--space-4) 0 var(--space-6);
+  text-wrap:pretty;
+}
+.hero-meta { display:flex; flex-wrap:wrap; gap:var(--space-2); margin-bottom:var(--space-5); }
+.hero-meta .pill {
+  font-family:var(--font-mono);
+  background:rgba(255,255,255,0.12);
+  border:1px solid rgba(255,255,255,0.28);
+  color:rgba(255,255,255,0.95);
+  padding:0.3rem 0.7rem;
+  border-radius:var(--radius-pill);
+  font-size:var(--text-xs);
+  font-weight:var(--fw-medium);
+  letter-spacing:var(--tracking-wide);
+  text-transform:uppercase;
+  backdrop-filter:blur(6px);
+}
+.hero-cta { display:flex; flex-wrap:wrap; gap:var(--space-3); margin-top:var(--space-3); }
+.btn {
+  display:inline-flex; align-items:center; gap:0.5rem;
+  font-family:var(--font-sans);
+  font-weight:var(--fw-semibold);
+  font-size:var(--text-sm);
+  padding:0.85rem 1.4rem;
+  border-radius:var(--radius-md);
+  border:1px solid transparent;
+  cursor:pointer;
+  text-decoration:none;
+  letter-spacing:var(--tracking-snug);
+  transition:transform var(--dur-fast) var(--ease-out), background var(--dur-fast) var(--ease-out), box-shadow var(--dur-fast) var(--ease-out);
+}
+.btn:hover { text-decoration:none; transform:translateY(-1px); }
+.btn:active { transform:translateY(1px) scale(0.99); }
+.btn-primary {
+  background:var(--brand); color:var(--white);
+  box-shadow:var(--shadow-brand);
+}
+.btn-primary:hover { background:var(--brand-hover); color:var(--white); }
+.btn-ghost {
+  background:rgba(255,255,255,0.12);
+  color:var(--white);
+  border-color:rgba(255,255,255,0.4);
+  backdrop-filter:blur(6px);
+}
+.btn-ghost:hover { background:rgba(255,255,255,0.22); color:var(--white); }
+.btn-outline {
+  background:transparent;
+  color:var(--brand-ink);
+  border-color:var(--border-default);
+}
+.btn-outline:hover { border-color:var(--brand); background:var(--brand-subtle); color:var(--brand-ink); }
+.btn-accent {
+  background:var(--accent); color:var(--white);
+  box-shadow:0 8px 22px rgba(238,111,65,0.28);
+}
+.btn-accent:hover { background:var(--accent-hover); color:var(--white); }
+section { padding:var(--space-10) 0; }
+.section-head { text-align:center; max-width:760px; margin:0 auto var(--space-7); }
+.section-head .eyebrow {
+  display:inline-block;
+  font-family:var(--font-mono);
+  font-size:var(--text-xs);
+  font-weight:var(--fw-medium);
+  letter-spacing:var(--tracking-caps);
+  text-transform:uppercase;
+  color:var(--brand);
+  margin-bottom:var(--space-2);
+}
+.section-head p {
+  color:var(--text-muted);
+  font-size:var(--text-md);
+}
+.bg-alt { background:var(--surface-sunken); }
+.topic-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(290px,1fr));
+  gap:var(--space-4);
+}
+.topic-card {
+  background:var(--surface-card);
+  border-radius:var(--radius-lg);
+  padding:var(--space-5);
+  border:1px solid var(--border-subtle);
+  text-decoration:none;
+  color:inherit;
+  display:flex; flex-direction:column;
+  transition:transform var(--dur-fast) var(--ease-out), box-shadow var(--dur-fast) var(--ease-out), border-color var(--dur-fast) var(--ease-out);
+  position:relative; overflow:hidden;
+}
+.topic-card::before {
+  content:""; position:absolute; top:0; left:0; right:0; height:3px;
+  background:linear-gradient(90deg,var(--brand),var(--secondary));
+  transform:scaleX(0); transform-origin:left;
+  transition:transform var(--dur-base) var(--ease-out);
+}
+.topic-card:hover {
+  transform:translateY(-3px);
+  box-shadow:var(--shadow-lg);
+  border-color:var(--blue-200);
+  text-decoration:none;
+}
+.topic-card:hover::before { transform:scaleX(1); }
+.topic-num {
+  font-family:var(--font-mono);
+  font-weight:var(--fw-medium);
+  font-size:var(--text-xs);
+  letter-spacing:var(--tracking-caps);
+  text-transform:uppercase;
+  color:var(--brand);
+  display:block;
+  margin-bottom:var(--space-2);
+}
+.topic-card h3 { margin:0 0 var(--space-2); color:var(--text-strong); }
+.topic-card p { margin:0; color:var(--text-muted); font-size:var(--text-sm); }
+.topic-card .arrow {
+  margin-top:auto;
+  padding-top:var(--space-4);
+  color:var(--brand);
+  font-family:var(--font-mono);
+  font-weight:var(--fw-medium);
+  font-size:var(--text-xs);
+  letter-spacing:var(--tracking-wide);
+  text-transform:uppercase;
+}
+.feature-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:var(--space-4);
+}
+.feature {
+  background:var(--surface-card);
+  border-radius:var(--radius-lg);
+  padding:var(--space-5);
+  border:1px solid var(--border-subtle);
+  transition:box-shadow var(--dur-fast) var(--ease-out), transform var(--dur-fast) var(--ease-out);
+}
+.feature:hover { box-shadow:var(--shadow-md); transform:translateY(-2px); }
+.feature-icon {
+  width:46px; height:46px;
+  border-radius:var(--radius-md);
+  display:grid; place-items:center;
+  font-size:1.4rem;
+  margin-bottom:var(--space-3);
+  background:var(--brand-subtle);
+  color:var(--brand-ink);
+  border:1px solid var(--blue-100);
+}
+.feature h3 { margin:0 0 var(--space-1); font-size:var(--text-md); color:var(--text-strong); }
+.feature p { margin:0; color:var(--text-muted); font-size:var(--text-sm); }
+.page-header {
+  position:relative; overflow:hidden;
+  color:var(--white);
+  padding:var(--space-10) 0 var(--space-12);
+  background:linear-gradient(135deg,var(--blue-700),var(--blue-500) 60%,var(--teal-600));
+}
+.page-header::before {
+  content:""; position:absolute; inset:0; pointer-events:none;
+  background-image:radial-gradient(rgba(255,255,255,0.12) 1px,transparent 1.4px);
+  background-size:18px 18px;
+  mask-image:linear-gradient(180deg,rgba(0,0,0,0.9) 0%,rgba(0,0,0,0) 100%);
+}
+.page-header::after {
+  content:""; position:absolute; bottom:-1px; left:0; right:0; height:46px;
+  background:var(--surface-page);
+  clip-path:polygon(0 100%,100% 100%,100% 0);
+}
+.page-header .container { position:relative; z-index:2; }
+.page-header h1 { color:var(--white); margin:var(--space-2) 0; }
+.page-header .lead {
+  font-size:var(--text-md);
+  color:rgba(255,255,255,0.92);
+  max-width:720px;
+}
+.page-num {
+  display:inline-block;
+  font-family:var(--font-mono);
+  background:rgba(255,255,255,0.15);
+  color:var(--white);
+  border:1px solid rgba(255,255,255,0.3);
+  font-weight:var(--fw-medium);
+  padding:0.25rem 0.75rem;
+  border-radius:var(--radius-pill);
+  font-size:var(--text-xs);
+  letter-spacing:var(--tracking-caps);
+  text-transform:uppercase;
+}
+.breadcrumbs { font-family:var(--font-mono); font-size:var(--text-xs); letter-spacing:var(--tracking-wide); text-transform:uppercase; margin-bottom:var(--space-3); }
+.breadcrumbs a { color:rgba(255,255,255,0.85); }
+.breadcrumbs a:hover { color:var(--white); }
+.breadcrumbs span { color:rgba(255,255,255,0.55); margin:0 var(--space-2); }
+.page-content {
+  display:grid;
+  grid-template-columns:240px 1fr;
+  gap:var(--space-8);
+  padding:var(--space-8) 0;
+}
+.toc {
+  position:sticky; top:96px; align-self:start;
+  background:var(--surface-card);
+  border:1px solid var(--border-subtle);
+  border-radius:var(--radius-lg);
+  padding:var(--space-4);
+  font-size:var(--text-sm);
+}
+.toc h4 {
+  font-family:var(--font-mono);
+  font-size:var(--text-xs);
+  letter-spacing:var(--tracking-caps);
+  text-transform:uppercase;
+  color:var(--text-muted);
+  margin:0 0 var(--space-3);
+}
+.toc ol { list-style:none; padding:0; margin:0; }
+.toc li { margin-bottom:var(--space-1); }
+.toc a {
+  display:block;
+  padding:0.4rem 0.6rem;
+  border-radius:var(--radius-sm);
+  color:var(--text-body);
+  border-left:3px solid transparent;
+  transition:background var(--dur-fast) var(--ease-out), color var(--dur-fast) var(--ease-out), border-color var(--dur-fast) var(--ease-out);
+  font-weight:var(--fw-medium);
+}
+.toc a:hover { background:var(--brand-subtle); color:var(--brand-ink); border-color:var(--blue-300); }
+.toc a.active { background:var(--brand-subtle); color:var(--brand-ink); border-color:var(--brand); }
+@media (max-width:980px) {
+  .page-content { grid-template-columns:1fr; gap:var(--space-5); }
+  .toc { position:static; }
+}
+article.content > * { max-width:800px; }
+article.content > section { max-width:none; }
+article.content h2 {
+  border-bottom:1px solid var(--border-subtle);
+  padding-bottom:var(--space-3);
+  margin-top:var(--space-10);
+  margin-bottom:var(--space-4);
+}
+article.content h2:first-child { margin-top:0; }
+article.content h3 { margin-top:var(--space-6); margin-bottom:var(--space-3); }
+article.content p  { margin:0 0 var(--space-4); }
+article.content ul,article.content ol { margin:0 0 var(--space-4); padding-left:1.4rem; }
+article.content li { margin-bottom:var(--space-1); }
+.callout {
+  background:var(--surface-card);
+  border-left:4px solid var(--brand);
+  border-radius:var(--radius-md);
+  padding:var(--space-4) var(--space-5);
+  margin:var(--space-5) 0;
+  box-shadow:var(--shadow-sm);
+}
+.callout.tip   { border-color:var(--secondary); background:var(--teal-50); }
+.callout.warn  { border-color:var(--accent); background:var(--coral-50); }
+.callout.quote { border-color:var(--brand-ink); background:var(--surface-sunken); font-style:italic; }
+.callout strong { color:var(--brand-ink); }
+.lernideen {
+  background:var(--surface-card);
+  border-radius:var(--radius-lg);
+  border:1px solid var(--border-subtle);
+  margin:var(--space-6) 0 var(--space-8);
+  overflow:hidden;
+  box-shadow:var(--shadow-sm);
+}
+.lernideen-header {
+  position:relative; overflow:hidden;
+  color:var(--white);
+  padding:var(--space-4) var(--space-5);
+  background:linear-gradient(135deg,var(--blue-700),var(--blue-500) 60%,var(--teal-500));
+}
+.lernideen-header::before {
+  content:""; position:absolute; inset:0;
+  background-image:radial-gradient(rgba(255,255,255,0.12) 1px,transparent 1.4px);
+  background-size:16px 16px;
+  pointer-events:none;
+}
+.lernideen-header > * { position:relative; z-index:1; }
+.lernideen-header h3 {
+  color:var(--white); margin:0;
+  font-size:var(--text-lg);
+  display:flex; align-items:center; gap:0.5rem;
+}
+.lernideen-header p {
+  margin:var(--space-1) 0 0;
+  color:rgba(255,255,255,0.85);
+  font-family:var(--font-mono);
+  font-size:var(--text-xs);
+  letter-spacing:var(--tracking-wide);
+  text-transform:uppercase;
+}
+.tabs {
+  display:flex; flex-wrap:wrap;
+  border-bottom:1px solid var(--border-subtle);
+  background:var(--surface-sunken);
+  padding:var(--space-2) var(--space-2) 0;
+}
+.tab-btn {
+  flex:1 1 auto; min-width:140px;
+  background:transparent; border:0;
+  border-radius:var(--radius-md) var(--radius-md) 0 0;
+  padding:0.7rem 0.9rem;
+  cursor:pointer;
+  font-family:var(--font-sans);
+  font-size:var(--text-sm);
+  font-weight:var(--fw-semibold);
+  color:var(--text-muted);
+  border-bottom:3px solid transparent;
+  transition:all var(--dur-fast) var(--ease-out);
+  text-align:center;
+}
+.tab-btn:hover { color:var(--brand-ink); background:rgba(255,255,255,0.6); }
+.tab-btn.active {
+  color:var(--brand-ink);
+  background:var(--surface-card);
+  border-bottom-color:var(--brand);
+}
+.tab-btn .role-tag {
+  display:block;
+  font-family:var(--font-mono);
+  font-size:0.65rem;
+  font-weight:var(--fw-regular);
+  opacity:0.7;
+  letter-spacing:var(--tracking-caps);
+  text-transform:uppercase;
+  margin-top:2px;
+}
+.tab-panels { padding:var(--space-5); }
+.tab-panel { display:none; }
+.tab-panel.active { display:block; animation:fadeIn var(--dur-base) var(--ease-out); }
+@keyframes fadeIn { from { opacity:0; transform:translateY(4px); } to { opacity:1; transform:translateY(0); } }
+.idea {
+  background:var(--surface-sunken);
+  border-radius:var(--radius-lg);
+  padding:var(--space-5);
+  margin-bottom:var(--space-4);
+  border:1px solid var(--border-subtle);
+}
+.idea h4 {
+  margin:0 0 var(--space-2);
+  color:var(--text-strong);
+  font-family:var(--font-display);
+  font-weight:var(--fw-semibold);
+  font-size:var(--text-md);
+  display:flex; align-items:center; gap:0.5rem;
+}
+.idea-meta {
+  display:flex; flex-wrap:wrap;
+  gap:var(--space-1);
+  margin-bottom:var(--space-3);
+}
+.idea-meta .badge {
+  font-family:var(--font-mono);
+  font-size:0.7rem;
+  font-weight:var(--fw-medium);
+  letter-spacing:var(--tracking-wide);
+  text-transform:uppercase;
+  padding:0.22rem 0.6rem;
+  border-radius:var(--radius-pill);
+  background:var(--surface-card);
+  color:var(--text-muted);
+  border:1px solid var(--border-subtle);
+}
+.idea-meta .badge.level-1 { background:var(--teal-50);   color:var(--teal-700);   border-color:var(--teal-200); }
+.idea-meta .badge.level-2 { background:var(--blue-50);   color:var(--brand-ink);  border-color:var(--blue-200); }
+.idea-meta .badge.level-3 { background:var(--slate-100); color:var(--slate-800);  border-color:var(--slate-300); }
+.idea-meta .badge.time    { background:var(--coral-50);  color:var(--coral-600);  border-color:var(--coral-200); }
+.idea-meta .badge.tool    { background:var(--brand-subtle); color:var(--brand-ink); border-color:var(--blue-200); }
+.idea-steps { margin:var(--space-3) 0; padding-left:1.2rem; }
+.idea-steps li { margin-bottom:0.35rem; font-size:var(--text-sm); }
+.prompt-box {
+  position:relative;
+  background:var(--slate-900);
+  color:#E6EEF3;
+  border-radius:var(--radius-md);
+  padding:1.1rem 3rem 1rem 1rem;
+  font-family:var(--font-mono);
+  font-size:0.85rem;
+  line-height:1.55;
+  margin:var(--space-3) 0;
+  white-space:pre-wrap;
+  word-break:break-word;
+  border:1px solid var(--slate-800);
+}
+.prompt-box::before {
+  content:"PROMPT";
+  position:absolute; top:0.55rem; left:0.95rem;
+  font-family:var(--font-mono);
+  font-size:0.65rem;
+  font-weight:var(--fw-medium);
+  letter-spacing:var(--tracking-caps);
+  color:var(--teal-300);
+}
+.prompt-content { display:block; padding-top:1rem; }
+.copy-btn {
+  position:absolute; top:0.55rem; right:0.55rem;
+  background:rgba(255,255,255,0.10);
+  color:var(--white);
+  border:1px solid rgba(255,255,255,0.25);
+  border-radius:var(--radius-sm);
+  padding:0.3rem 0.65rem;
+  font-family:var(--font-mono);
+  font-size:0.7rem;
+  font-weight:var(--fw-medium);
+  letter-spacing:var(--tracking-wide);
+  text-transform:uppercase;
+  cursor:pointer;
+  transition:background var(--dur-fast) var(--ease-out);
+}
+.copy-btn:hover  { background:rgba(255,255,255,0.2); }
+.copy-btn.copied { background:var(--secondary); color:var(--white); border-color:var(--secondary); }
+.idea-reflect {
+  margin-top:var(--space-3);
+  padding:0.7rem 0.9rem;
+  background:var(--brand-subtle);
+  border-left:3px solid var(--brand);
+  border-radius:0 var(--radius-md) var(--radius-md) 0;
+  font-size:var(--text-sm);
+  color:var(--text-body);
+}
+.idea-reflect strong { color:var(--brand-ink); }
+.coming-soon {
+  text-align:center; padding:var(--space-6);
+  color:var(--text-muted); font-style:italic;
+}
+.embed-card {
+  background:var(--surface-card);
+  border-radius:var(--radius-lg);
+  border:1px solid var(--border-subtle);
+  overflow:hidden;
+  margin:var(--space-5) 0;
+  box-shadow:var(--shadow-sm);
+  transition:box-shadow var(--dur-fast) var(--ease-out), transform var(--dur-fast) var(--ease-out);
+}
+a.embed-card { display:block; }
+a.embed-card:hover { box-shadow:var(--shadow-lg); transform:translateY(-2px); text-decoration:none; }
+.embed-card-head {
+  padding:var(--space-4) var(--space-5);
+  background:var(--surface-card);
+  border-bottom:1px solid var(--border-subtle);
+  display:flex; align-items:center; justify-content:space-between;
+  flex-wrap:wrap; gap:var(--space-2);
+}
+.embed-card-head h4 { margin:0; color:var(--text-strong); }
+.embed-frame {
+  position:relative; width:100%; padding-top:60%;
+  background:var(--slate-900);
+}
+.embed-frame iframe {
+  position:absolute; inset:0; width:100%; height:100%; border:0;
+}
+.resource-list { list-style:none; padding:0; }
+.resource-list li {
+  background:var(--surface-card);
+  border:1px solid var(--border-subtle);
+  border-radius:var(--radius-md);
+  padding:0.9rem 1rem;
+  margin-bottom:0.6rem;
+  display:flex; align-items:center; gap:var(--space-3);
+  transition:border-color var(--dur-fast) var(--ease-out), transform var(--dur-fast) var(--ease-out);
+}
+.resource-list li:hover { border-color:var(--brand); transform:translateX(2px); }
+.resource-list .res-type {
+  flex-shrink:0;
+  width:36px; height:36px;
+  border-radius:var(--radius-sm);
+  display:grid; place-items:center;
+  background:var(--brand-subtle);
+  color:var(--brand);
+  font-size:1rem;
+}
+.resource-list a { font-weight:var(--fw-semibold); color:var(--brand-ink); }
+.resource-list .res-meta {
+  display:block;
+  font-family:var(--font-mono);
+  color:var(--text-muted);
+  font-size:0.75rem;
+  letter-spacing:var(--tracking-wide);
+  text-transform:uppercase;
+}
+.site-footer {
+  background:var(--slate-900);
+  color:rgba(255,255,255,0.78);
+  padding:var(--space-7) 0 var(--space-5);
+  margin-top:var(--space-10);
+}
+.site-footer .container {
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr;
+  gap:var(--space-6);
+}
+@media (max-width:700px) { .site-footer .container { grid-template-columns:1fr; } }
+.site-footer h4 {
+  font-family:var(--font-mono);
+  color:var(--teal-300);
+  font-size:0.75rem;
+  font-weight:var(--fw-medium);
+  letter-spacing:var(--tracking-caps);
+  text-transform:uppercase;
+  margin-bottom:var(--space-3);
+}
+.site-footer ul { list-style:none; padding:0; margin:0; }
+.site-footer li { margin-bottom:0.4rem; }
+.site-footer a { color:rgba(255,255,255,0.82); font-size:var(--text-sm); }
+.site-footer a:hover { color:var(--white); }
+.site-footer .copy {
+  border-top:1px solid rgba(255,255,255,0.12);
+  padding-top:var(--space-4);
+  margin-top:var(--space-6);
+  text-align:center;
+  font-family:var(--font-mono);
+  font-size:0.75rem;
+  letter-spacing:var(--tracking-wide);
+  color:rgba(255,255,255,0.55);
+}
+.text-center { text-align:center; }
+.mt-0 { margin-top:0; }
+.mt-1 { margin-top:var(--space-2); }
+.mt-2 { margin-top:var(--space-4); }
+.mt-3 { margin-top:var(--space-5); }
+.mt-4 { margin-top:var(--space-7); }
+.two-col {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:var(--space-5);
+}
+.note-card {
+  background:var(--surface-card);
+  border:1px solid var(--border-subtle);
+  border-radius:var(--radius-lg);
+  padding:var(--space-5);
+  transition:box-shadow var(--dur-fast) var(--ease-out);
+}
+.note-card:hover { box-shadow:var(--shadow-md); }
+.note-card h4 {
+  margin-top:0;
+  font-family:var(--font-display);
+  color:var(--brand-ink);
+  font-size:var(--text-md);
+}
+</style>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a class="brand" href="../index.html">
+      <div class="brand-logo"><span>KI</span></div>
+      <div class="brand-name">KI-Magie<small>DigitalEduLab · Fortbildung</small></div>
+    </a>
+    <button class="nav-toggle" aria-label="Menü"><span></span></button>
+    <nav class="main-nav">
+      <a href="../index.html">Start</a>
+      <a href="01-ki-im-alltag.html">Alltag</a>
+      <div class="nav-group">
+        <button class="nav-trigger" type="button" aria-expanded="false" aria-haspopup="true">Literacy <span class="chev" aria-hidden="true">▾</span></button>
+        <div class="nav-dropdown" role="menu">
+          <a href="02-ai-literacy-lehrende.html" role="menuitem">Lehrende</a>
+          <a href="03-ai-literacy-lernende.html" role="menuitem">Lernende</a>
+        </div>
+      </div>
+      <a href="04-technologiewissen.html">Technik</a>
+      <a href="05-praktische-anwendung.html">Praxis</a>
+      <div class="nav-group">
+        <button class="nav-trigger" type="button" aria-expanded="false" aria-haspopup="true">Chancen <span class="chev" aria-hidden="true">▾</span></button>
+        <div class="nav-dropdown" role="menu">
+          <a href="06-potenziale-bildung.html" role="menuitem">Bildung</a>
+          <a href="07-potenziale-alltag.html" role="menuitem">Gesellschaft</a>
+        </div>
+      </div>
+      <a href="08-ethik-zukunft.html">Ethik</a>
+      <a href="09-didaktischer-einsatz.html">Didaktik</a>
+      <a href="10-einfuehrung-unterricht.html">Einführung</a>
+      <a href="11-datenschutz.html">Datenschutz</a>
+          <div class="nav-group">
+        <button class="nav-trigger" type="button" aria-expanded="false" aria-haspopup="true">Lernideen <span class="chev" aria-hidden="true">▾</span></button>
+        <div class="nav-dropdown" role="menu">
+          <a href="lernideen-bildung.html" role="menuitem">Bildung</a>
+          <a href="lernideen-alltag.html" role="menuitem">Alltag</a>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<header class="page-header">
+  <div class="container">
+    <div class="breadcrumbs"><a href="../index.html">Start</a><span>/</span>Workshop 06</div>
+    <span class="page-num">Workshop 06</span>
+    <h1>Potenziale &amp; Herausforderungen von KI in der Bildung</h1>
+    <p class="lead">Wo verändert KI Lehren und Lernen positiv? Wo entstehen neue Risiken? Eine ehrliche Bestandsaufnahme - mit Übungen für Kollegium und Klasse.</p>
+  </div>
+</header>
+
+<div class="container">
+  <div class="page-content">
+
+    <aside class="toc">
+      <h4>In diesem Workshop</h4>
+      <ol>
+        <li><a href="#chancen">Chancen für die Bildung</a></li>
+        <li><a href="#risiken">Herausforderungen &amp; Risiken</a></li>
+        <li><a href="#paradox">Das KI-Paradox in der Schule</a></li>
+        <li><a href="#szenarien">Drei Szenarien</a></li>
+        <li><a href="#lernideen">Lernideen mit KI</a></li>
+        <li><a href="#ressourcen">Ressourcen</a></li>
+      </ol>
+    </aside>
+
+    <article class="content">
+
+      <section id="chancen">
+        <h2>Chancen für Lehren und Lernen</h2>
+        <ul>
+          <li><strong>Differenzierung skalierbar:</strong> Materialien lassen sich in Sekunden auf mehrere Niveaus zuschneiden.</li>
+          <li><strong>Diagnostik:</strong> Fehlerprofile auswerten, Hypothesen bilden, gezielt fördern.</li>
+          <li><strong>Sprachsensibler Unterricht:</strong> Texte vereinfachen, Wortspeicher generieren, Übersetzungen anbieten.</li>
+          <li><strong>Kreativitätsbooster:</strong> Brainstorming, Stilvariationen, Perspektivwechsel.</li>
+          <li><strong>Entlastung:</strong> Routinen wie Elternbriefe, Stundenplan-Reorganisation, Material-Recycling.</li>
+          <li><strong>Inklusion:</strong> Sprachausgabe, Bildbeschreibung, einfache Sprache, multimodaler Zugang.</li>
+        </ul>
+
+        <figure style="margin:var(--space-6) 0 0;text-align:center;">
+          <div style="background:var(--surface-card);border:1px solid var(--border-subtle);border-radius:var(--radius-lg);padding:var(--space-5);box-shadow:var(--shadow-sm);">
+            <img src="../assets/deeper-learning.svg" alt="Schaubild: KI-gestütztes tiefes Lernen - sechs Felder im Deeper-Learning-Framework. Implementation (KI integriert Deep Learning in die Schulentwicklung), Evaluation (KI ermöglicht sofortiges und umfassendes Lernfeedback), Authentic Performance (KI unterstützt authentische Entscheidungsfindung in Lernprozessen), Instruction (KI bietet personalisierte und kontinuierliche Lernunterstützung), Co-Construction (KI fördert selbstgesteuertes Lernen und Kompetenzentwicklung), Co-Design (KI hilft bei der Gestaltung effektiver Lernumgebungen)." loading="lazy" style="width:100%;max-width:600px;height:auto;display:block;margin:0 auto;" />
+          </div>
+          <figcaption style="font-family:var(--font-mono);font-size:var(--text-xs);letter-spacing:var(--tracking-wide);text-transform:uppercase;color:var(--text-muted);margin-top:var(--space-3);">Schaubild · KI-gestütztes tiefes Lernen - sechs Felder des Deeper-Learning-Frameworks</figcaption>
+        </figure>
+
+        <figure style="margin:var(--space-6) 0 0;text-align:center;">
+          <div style="background:var(--surface-card);border:1px solid var(--border-subtle);border-radius:var(--radius-lg);padding:var(--space-5);box-shadow:var(--shadow-sm);">
+            <img src="../assets/ki-bildungstransformation.svg" alt="Schaubild: KI-gestützte Bildungstransformation - sechs Wirkfelder. Personalisierte Förderung (KI-Systeme passen Lernmaterialien an individuelle Bedürfnisse an), Barrierefreiheit (Lernende mit sensorischen Einschränkungen unterstützen), Gleichheit (Zugang zu Bildung unabhängig von Sprach- oder körperlichen Einschränkungen), Virtuelle Simulationen (immersive Lernerfahrungen ohne physische Einschränkungen), Virtuelle Experten (KI bringt Experten in den Unterricht), Projektunterstützung (KI verbessert Organisation und Kreativität in Projektarbeit). Bildungsungleichheiten werden durch gleiche Chancen für alle reduziert." loading="lazy" style="width:100%;max-width:780px;height:auto;display:block;margin:0 auto;" />
+          </div>
+          <figcaption style="font-family:var(--font-mono);font-size:var(--text-xs);letter-spacing:var(--tracking-wide);text-transform:uppercase;color:var(--text-muted);margin-top:var(--space-3);">Schaubild · KI-gestützte Bildungstransformation - sechs Wirkfelder für mehr Chancengleichheit</figcaption>
+        </figure>
+
+        <figure style="margin:var(--space-6) 0 0;text-align:center;">
+          <div style="background:var(--surface-card);border:1px solid var(--border-subtle);border-radius:var(--radius-lg);padding:var(--space-5);box-shadow:var(--shadow-sm);">
+            <img src="../assets/drei-tech-trends.svg" alt="Schaubild: Technologische Trends in der Bildung - Von isoliert zu integriert. Drei Schichten in einem gestapelten Datenbank-Symbol: Intelligente Tutoringsysteme (kombinieren symbolische und generative KI), Integrierte Plattformen (verschmelzen verschiedene Technologiegruppen für Bildung), KI-Agentensysteme (bieten personalisierte, integrierte Unterstützung durch Agenten). Bewegung von isolierten Einzelwerkzeugen hin zu integrierten Bildungs-Stacks." loading="lazy" style="width:100%;max-width:520px;height:auto;display:block;margin:0 auto;" />
+          </div>
+          <figcaption style="font-family:var(--font-mono);font-size:var(--text-xs);letter-spacing:var(--tracking-wide);text-transform:uppercase;color:var(--text-muted);margin-top:var(--space-3);">Schaubild · Drei technologische Trends in der Bildung · Quelle: Telekom-Stiftung, Trendmonitor 2025</figcaption>
+        </figure>
+
+        <h3 style="margin-top:var(--space-7);">KI als Chance: Transformation und Erneuerung schulischer Lernformen</h3>
+        <p>Künstliche Intelligenz birgt das Potenzial, den Kern schulischer Bildung neu zu definieren und längst überfällige Reformen voranzutreiben.</p>
+
+        <div class="two-col">
+          <div class="note-card">
+            <h4>Vom Stoffvermittler zum Lernbegleiter</h4>
+            <p>KI kann Lehrkräfte bei repetitiven Aufgaben entlasten - von der Unterrichtsvorbereitung über adaptive Materialien bis zu automatisierten Korrekturvorschlägen bei (insbesondere standardisierten) Tests und Prüfungen. Die gewonnene Zeit ermöglicht es Lehrkräften, sich auf ihre eigentliche Stärke zu konzentrieren: die Rolle als <strong>Lern-Coaches, Motivierende und Begleitende</strong>. Die zentrale Herausforderung ist dabei, die KI-Entwicklungen in eine moderne Didaktik einzubetten.</p>
+          </div>
+          <div class="note-card">
+            <h4>Mehr Bildungsgerechtigkeit</h4>
+            <p>KI-gestützte, personalisierte Lernpfade und adaptive Tutoringsysteme können individuellen Lernbedürfnissen gerecht werden und den Zugang zu Unterrichtsfächern und interdisziplinärem Lernen erleichtern. Eine entscheidende Chance, um <strong>Bildungsgerechtigkeit zu stärken</strong>, Benachteiligungen abzubauen und spezifische Defizite zu adressieren, wie sie etwa in PISA und IGLU sichtbar werden.</p>
+          </div>
+          <div class="note-card">
+            <h4>„Unstrittige" Effizienzpotenziale offensiv ausbauen</h4>
+            <p>Insbesondere im administrativen Bereich - von Planung und Organisation über die Prüfung bis zur Evaluation - bietet KI enorme und weithin anerkannte Effizienzgewinne. Ein offensiver Ausbau dieser Anwendungen entlastet Lehrkräfte und Schulleitungen massiv, transformiert ihre Rolle und schafft <strong>Freiräume für pädagogische Kernaufgaben</strong>.</p>
+          </div>
+        </div>
+
+        <figure style="margin:var(--space-6) 0;text-align:center;">
+          <div style="background:var(--surface-card);border:1px solid var(--border-subtle);border-radius:var(--radius-lg);padding:var(--space-5);box-shadow:var(--shadow-sm);">
+            <img src="../assets/ki-kompetenzen-anwendungen.webp" alt="Infografik: KI in der Bildung - Kompetenzen und Anwendungen. Links: Die 4 Säulen der KI-Kompetenz - Verstehen (Funktionsweise, Begriffe und Mechanismen von KI-Technologien kennen), Reflektieren (KI-Ergebnisse, ethische Aspekte und Risiken kritisch bewerten), Anwenden (KI bewusst zur Steigerung von Kreativität und zur Kollaboration nutzen), Mitgestalten (an der Diskussion, Optimierung und Weiterentwicklung von KI-Systemen teilhaben). Rechts: Matrix KI-Anwendungen strategisch einsetzen, Achsen Pädagogische Wirkung und Effizienz mit vier Quadranten - Maximale Wirkung Personalisierte Lernpfade (hohe Effizienz, hohe Wirkung), Hoher Lerneffekt KI als Lernbegleiter (geringe Effizienz, hohe Wirkung), Effizienzsteigerung Automatisierte Korrektur (hohe Effizienz, geringe Wirkung), Geringer Nutzen Administrative Aufgaben (geringe Effizienz, geringe Wirkung)." loading="lazy" style="width:100%;max-width:900px;height:auto;display:block;margin:0 auto;" />
+          </div>
+          <figcaption style="font-family:var(--font-mono);font-size:var(--text-xs);letter-spacing:var(--tracking-wide);text-transform:uppercase;color:var(--text-muted);margin-top:var(--space-3);">Infografik · KI-Kompetenzen und strategischer Einsatz - Vier Säulen plus Wirkung/Effizienz-Matrix</figcaption>
+        </figure>
+
+        <h3 style="margin-top:var(--space-7);">Schlüssel zu Erfolg und Reflexion</h3>
+        <p>Der Erfolg der KI-Integration in Schulen steht und fällt mit dem Engagement und den Kompetenzen der Lehrenden. Sie sind die zentrale Zielgruppe für die Förderung von KI-Kompetenzen, wie sie auch die KI-Verordnung von KI-System-Anbietern und -Betreibern verlangt. Es geht um mehr als nur Anwendungswissen: um einen <strong>reflektorischen Umgang mit KI</strong>, das Einschätzen der Qualität KI-generierter Inhalte und das Verständnis für die pädagogischen und didaktischen Implikationen.</p>
+
+        <div class="two-col">
+          <div class="note-card">
+            <h4>Anreize und Nutzen</h4>
+            <p>Die EU-KI-Verordnung (<em>AI-Act</em>) verlangt von Lehrkräften nicht nur technisches KI-Wissen, sondern auch ethisches, rechtliches und soziales Verständnis. Doch statt neuer Steuerungsbürokratie braucht es klare Ziele, Anreize und spürbare Nutzenvorteile: KI-Tools müssen im Schulalltag Zeit für das Wesentliche schaffen - sonst scheitern alle Initiativen. Entscheidend ist das Engagement der Lehrkräfte, die gemeinsam KI in die Praxis umsetzen wollen. Doch die Schulleitungen müssen die <strong>Rahmenbedingungen</strong> hierfür schaffen: Infrastruktur, Strategie und Organisation.</p>
+          </div>
+          <div class="note-card">
+            <h4>Debatte um künftige Kompetenzerwartungen</h4>
+            <p>Die öffentliche Debatte über künftige Kompetenzerwartungen und mögliche negative Effekte wie <em>Deskilling</em> (Verlust von Fertigkeiten) bzw. <em>Cognitive Offloading</em> sollte offen und konstruktiv geführt werden. Hier können <strong>Qualifizierungsmaßnahmen</strong> verhindern, dass etwa die Fähigkeit zum Formulieren längerer Texte trotz KI-Unterstützung verloren geht.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="risiken">
+        <h2>Herausforderungen &amp; Risiken</h2>
+        <ul>
+          <li><strong>Halluzinationen</strong> - sachlich falsche Inhalte, sicher formuliert.</li>
+          <li><strong>Bias</strong> - Trainingsdaten reproduzieren Vorurteile.</li>
+          <li><strong>Bildungsgerechtigkeit</strong> - wer hat Zugang zu welchen Tools?</li>
+          <li><strong>Bewertung</strong> - was ist Eigenleistung? Was Plagiat?</li>
+          <li><strong>Datenschutz</strong> - Eingabe vertraulicher Inhalte, Kindeswohl.</li>
+          <li><strong>Bequemlichkeit</strong> - Lernende kürzen Denkprozesse ab und gewöhnen sich Skills ab.</li>
+          <li><strong>Lehrerentwertung</strong> - die Frage „wozu noch lernen, wenn die KI das kann?"</li>
+        </ul>
+        <div class="callout warn">
+          KI ist wie ein gut gefülltes Buffet: Wer planlos zugreift, wird müde. Wer überlegt auswählt, wird genährt.
+        </div>
+
+        <h3 style="margin-top:var(--space-7);">Deskilling - wenn KI den Lernprozess abnimmt</h3>
+        <p>Eine der zentralen Herausforderungen ist nicht der falsche Output der KI - sondern das, was bei den Lernenden <em>nicht mehr passiert</em>, wenn sie die KI nutzen. Wenn das Modell recherchiert, gliedert und formuliert, findet im Kopf der Schüler:innen genau dort kein Kompetenzaufbau mehr statt. Der Journalist <strong>Gregor Schmalzried</strong> beschreibt das Spannungsfeld in seinem Buch <em>„Wir aber besser"</em> sehr persönlich:</p>
+
+        <div class="callout quote">
+          „Natürlich hilft mir KI beim Schreibprozess. Während ich diesen Satz hier tippe, habe ich nicht weniger als ein Dutzend Tabs mit verschiedenen Chatbots offen, denen ich Informationen, Ideen und Unklarheiten zuspiele. Ich nutze KI, um meine Notizen zu sortieren, den Überblick zu behalten und Formulierungen zu verbessern. <strong>Aber ich nutze sie nicht zum Denken.</strong>"
+        </div>
+
+        <div class="callout quote">
+          „Ein Appell, pauschal auf KI zu verzichten, lässt sich aus der Microsoft-Studie allerdings nicht ablesen. Sondern eher, richtig mit ihr umzugehen. Tatsächlich zeigt die Untersuchung auch: Wenn man bereits ein hohes Selbstvertrauen in einem Bereich mitbringt, führt die Arbeit mit KI oft sogar zu mehr kritischem Denken, nicht zu weniger. Skepsis gegenüber einer neuen Technologie ist also nichts Schlechtes. Der beste KI-Nutzer ist einer, der nicht einfach nur der KI vertraut - sondern vor allem sich selbst.<br><br>Dieses Vertrauen in uns selbst zu entwickeln, parallel zu den Fähigkeiten einer stets besser werdenden Künstlichen Intelligenz: Das wird eine der wichtigsten Aufgaben des 21. Jahrhunderts. Wir werden in immer mehr Fällen überlegen müssen, wann wir selbst kochen und wann wir die Mikrowelle benutzen."
+        </div>
+
+        <h4 style="margin-top:var(--space-5);">Deskilling - alter Begriff, neue Bedeutung im Klassenzimmer</h4>
+        <p>Der Begriff <strong>Deskilling</strong> stammt ursprünglich aus den Wirtschaftswissenschaften und beschreibt, wie technologischer Fortschritt den Bedarf an menschlicher Qualifikation für einen Produktionsprozess senkt. Wo früher ein ganzes Spektrum an Fähigkeiten gefragt war, genügt heute oft die Beherrschung einer einzigen Schnittstelle. Der Bäcker von einst brauchte Wissen, Erfahrung und seine Sinne - sein Nachfolger in der Industrieanlage braucht vor allem die Kompetenz, ein digitales Menü zu bedienen.</p>
+        <p>Im schulischen Kontext muss der Begriff neu justiert werden: Es geht nicht mehr primär darum, dass ein <em>Produkt</em> weniger Kompetenz erfordert, sondern darum, dass der <em>Schüler oder die Schülerin am Ende weniger Kompetenz hat</em>. Wenn die KI den Prozess zum Produkt übernimmt - die Recherche, das Gliedern, das Formulieren -, findet kein Kompetenzaufbau in diesen Bereichen statt.</p>
+
+        <figure style="margin:var(--space-6) 0;text-align:center;">
+          <div style="background:var(--surface-card);border:1px solid var(--border-subtle);border-radius:var(--radius-lg);padding:var(--space-5);box-shadow:var(--shadow-sm);">
+            <img src="../assets/deskilling.svg" alt="Schaubild: Deskilling ist mehr als nur der Verlust von Fähigkeiten - drei Schichten in einer Treppen-/Pyramidenmetapher. Oben Bedienung digitaler Menüs (die Fähigkeit, digitale Menüs zu bedienen). Mitte Technologischer Fortschritt (der technologische Fortschritt reduziert den Bedarf an menschlichen Fähigkeiten). Unten Verlust von Wissen (Verlust von Wissen, Erfahrung und Sinnen) und Automatisierung der Kunst (die Maschine übernimmt die eigentliche Handwerkskunst)." loading="lazy" style="width:100%;max-width:980px;height:auto;display:block;margin:0 auto;" />
+          </div>
+          <figcaption style="font-family:var(--font-mono);font-size:var(--text-xs);letter-spacing:var(--tracking-wide);text-transform:uppercase;color:var(--text-muted);margin-top:var(--space-3);">Schaubild · Deskilling - vier Ebenen vom Werkzeug-Bedienen bis zum Verlust der Handwerkskunst</figcaption>
+        </figure>
+
+        <h4 style="margin-top:var(--space-5);">Motivation als entscheidender Faktor</h4>
+        <p>Welche Haltung Schüler:innen zur KI wählen, hängt von einem einzigen Faktor ab: der <strong>Motivation</strong>. Wenn eine Aufgabe nur eine lästige Pflicht ist, wird jedes Werkzeug zur Effizienzsteigerung genutzt. Nur wenn ein echtes Interesse oder ein hoher persönlicher Anreiz besteht, wird das Werkzeug zur Bereicherung des Lernprozesses.</p>
+        <p>Beobachtung aus einem Wirtschaftskurs der Oberstufe: Ein gutes Jahr vor dem Abitur, als der große Prüfungsdruck noch fern war, diente die KI primär als <em>Produktionsassistent</em>. Ihr Zweck war es, schnell zu einem vorzeigbaren Ergebnis zu kommen - klassisches <em>Skill-Skipping</em>. Wenige Wochen vor den finalen Klausuren jedoch, als es darum ging, den gesamten Stoff wirklich zu beherrschen, änderte sich das Verhalten radikal: Dieselben Schüler:innen nutzten die KI nun als <strong>unermüdlichen Tutor</strong> - ließen sich komplexe Theorien in einfachen Worten erklären, forderten Beispiele aus ihrer Lebenswelt an und schlossen gezielt Wissenslücken. Der entscheidende Faktor war nicht die Technologie, sondern der Druck und der Wille, es wirklich verstehen zu wollen.</p>
+
+        <div class="callout tip">
+          <strong>Quelle:</strong> Gregor Schmalzried, <em>„Wir aber besser"</em> · Hintergrundartikel auf <a href="https://deutsches-schulportal.de/expertenstimmen/wenn-die-ki-den-lernprozess-abnimmt/" target="_blank" rel="noopener">Deutsches Schulportal - „Wenn die KI den Lernprozess abnimmt"</a> (aufgerufen am 06.10.2025).
+        </div>
+
+        <h3 style="margin-top:var(--space-7);">Automatisierte Vergesslichkeit - Cognitive Offloading verstehen</h3>
+        <p>Wir fragen ChatGPT nach Rezepten und lassen uns vom Handy durch die Stadt navigieren. Falsch angewendet, kann das zu weniger kognitiver Leistung führen. Richtig angewendet, schafft es im Kopf mehr Raum für andere Dinge.</p>
+
+        <h4 style="margin-top:var(--space-5);">Die MIT-Studie und ihr Echo</h4>
+        <p>Eine vorveröffentlichte Studie des Massachusetts Institute of Technology sorgte 2025 für Schlagzeilen: <strong>„Wer mit ChatGPT arbeitet, häuft kognitive Schulden an."</strong> Versuchspersonen schrieben über mehrere Sitzungen Essays - ein Teil eigenständig, ein zweiter mit Suchmaschinen, der dritte durfte ChatGPT einsetzen. Letzteren bescheinigten die Forschenden weniger vernetzte Gehirnaktivierung und einen schwächeren Lerneffekt. Außerdem fiel es ihnen schwerer, korrekt aus ihren eigenen Essays zu zitieren.</p>
+        <p>Trotz Kritik (kleine Stichprobe) trifft die Studie einen Nerv. Eine polnische <em>Lancet</em>-Studie zeigt parallel: Ärzt:innen, die Darmkrebs-Screenings drei Monate lang mit KI-Unterstützung absolvierten, erkannten danach in eigenständiger Arbeit nur noch 22 % der Krebsfälle - vorher 27 %.</p>
+
+        <figure style="margin:var(--space-6) 0;text-align:center;">
+          <div style="background:var(--surface-card);border:1px solid var(--border-subtle);border-radius:var(--radius-lg);padding:var(--space-5);box-shadow:var(--shadow-sm);">
+            <img src="../assets/kognitive-auswirkungen.png" alt="Schaubild: Kognitive Auswirkungen der Technologie - fünf Schlüssel an einem Schlüsselring. Kognitive Schulden (potenzielle Verringerung der Gehirnaktivierung und des Lernens durch übermäßige KI-Nutzung), Kritische Denkfähigkeiten (Bedeutung der Aufrechterhaltung kritischen Denkens angesichts der KI-Nutzung), Informationsqualität (Notwendigkeit, Genauigkeit und Zuverlässigkeit KI-generierter Informationen zu gewährleisten), Gedächtnisverlust (potenzielle Verringerung der Gedächtnisretention durch übermäßiges Verlassen auf digitale Hilfsmittel), Cognitive Offloading (Praxis, Denkarbeit an Technologie abzugeben, und ihre Auswirkungen auf die Fähigkeiten)." loading="lazy" style="width:100%;max-width:720px;height:auto;display:block;margin:0 auto;" />
+          </div>
+          <figcaption style="font-family:var(--font-mono);font-size:var(--text-xs);letter-spacing:var(--tracking-wide);text-transform:uppercase;color:var(--text-muted);margin-top:var(--space-3);">Schaubild · Fünf kognitive Auswirkungen der Technologie - Schulden, Denken, Qualität, Gedächtnis, Offloading</figcaption>
+        </figure>
+
+        <h4 style="margin-top:var(--space-5);">Cognitive Offloading ist nichts Neues</h4>
+        <p>Die Sorge um kognitive Fähigkeiten ist älter als KI. Auch Navigationssysteme und Autopiloten zeigen den Effekt: Wer die Routen ans Navi auslagert, verliert Fähigkeiten wie das Einprägen oder Rotieren von Karten. Pilot:innen sind ohne Autopilot ungeleenker - vor allem in komplexen Entscheidungssituationen. Das Prinzip dahinter ist alt: <strong>„Use it or lose it"</strong>.</p>
+        <p>Aber: Cognitive Offloading ist auch eine <strong>bewährte Strategie</strong>. Wir zählen mit den Fingern, notieren Termine im Kalender, verteilen den Mental Load in der Partnerschaft. Das schafft Platz im Kopf - besonders, wenn wir gestresst sind oder unser Arbeitsspeicher mit dem Alter nachlässt.</p>
+
+        <h4 style="margin-top:var(--space-5);">Verlagerung statt Verlust</h4>
+        <p>Seit Smartphones tragen wir „schier unbegrenzte Mengen an Information in unserer Jackentasche". Die Forschung spricht von einer <strong>Verlagerung der Kompetenzen</strong>: weg von der Information, hin zur Informationsgewinnung. Junge Leute wissen weniger Jahreszahlen oder Baumarten aus dem Kopf - aber sie wissen ausgezeichnet, wie man alles davon online nachschlägt.</p>
+        <p>Aber: Auf der Ebene des Gedächtnisses macht es einen Unterschied, ob wir uns an ein Konzept erinnern oder nur daran, wie man es googelt. Erinnerung aktiviert ein Netzwerk an Nervenzellen, weckt Assoziationen, Texturen, Gerüche. Wer nur kurz nachschlägt, behält die Information so tief wie die Backanleitung auf dem Pizzakarton.</p>
+
+        <h4 style="margin-top:var(--space-5);">Hybride Arbeit ist die Lösung</h4>
+        <p>Eine US-amerikanische Studie zur Wahlentscheidung zeigt: Wer in einer <strong>digitalen Speicherumgebung</strong> politische Nachrichten verfolgen, abspeichern und wieder abrufen konnte, konsumierte insgesamt <em>weniger</em> Informationen - aber intensiver - und traf am Ende fundiertere Entscheidungen.</p>
+        <p>Die Erkenntnis gilt allgemein: <strong>Digitale Technik kann unser Denken und Gedächtnis beflügeln - aber nur in dem Ausmaß, in dem wir mitdenken.</strong> Die amerikanische Flugaufsicht empfiehlt Pilot:innen <em>halbautomatisches</em> Steuern. Beim Navigieren hilft es, sich Wegbeschreibungen entlang von Bauwerken statt nur Pfeilen geben zu lassen. Selbst in der MIT-Studie schnitten die Studierenden am Ende am besten ab, die selbst schreiben mussten, aber Suchmaschinen nutzen durften.</p>
+
+        <h4 style="margin-top:var(--space-5);">Drei Knackpunkte bei KI</h4>
+        <div class="two-col">
+          <div class="note-card">
+            <h4>1. Verführung zur Komplett-Abgabe</h4>
+            <p>KIs laden gerade dazu ein, uns die <em>komplette</em> Arbeit abzunehmen. Auf Klick kommt das Computerscript, die Recherche, der französische Brief. Aber: Wer Texte per Copy &amp; Paste übersetzt, lernt die Konjugationsregeln nie. Wer keine Schreiberfahrung hat, kann nicht beurteilen, ob ChatGPTs Essay wirklich besser ist.</p>
+          </div>
+          <div class="note-card">
+            <h4>2. Externalisiertes Wissen ist verletzlich</h4>
+            <p>Schon eine schlechtere Google-Suchfunktion macht Informationen unzugänglich, die wir „jederzeit abrufbar glaubten". Die US-Regierung hat zuletzt Daten zu Klimawandel, queeren Menschen und epidemiologischer Forschung gelöscht. Die Datengrundlage der Chatbots ist so undurchsichtig, dass kaum Verantwortung übernommen werden kann.</p>
+          </div>
+          <div class="note-card">
+            <h4>3. Wenn das Werkzeug lügt</h4>
+            <p>Eine BBC-Studie fand gravierende Fehler in <strong>45 %</strong> der KI-Zusammenfassungen journalistischer Artikel. 15 % der 25-Jährigen weltweit beziehen Nachrichten von KI-Assistenten. Gleichzeitig sinkt die Häufigkeit, mit der Chatbots „weiß ich nicht" sagen - während halluzinierte Antworten auf <strong>35 %</strong> gestiegen sind.</p>
+          </div>
+        </div>
+
+        <div class="callout warn" style="margin-top:var(--space-4);">
+          <strong>Papst Leo zur KI-Nutzung:</strong> Arbeite so, dass du noch genauso kompetent wärst, wenn die KI heute verschwände. Ironischerweise zeigt eine aktuelle Studie: Menschen überschätzen systematisch, wie stark KI ihre Arbeit verbessert - und das gilt besonders für jene, die <em>besonders viel</em> mit KI arbeiten.
+        </div>
+
+        <div class="callout tip">
+          <strong>Quelle:</strong> Zusammenfassung des taz-Artikels „Automatisierte Vergesslichkeit" (taz, 06.12.2025) - bei Bedarf Originalartikel zur vollständigen Lektüre konsultieren.
+        </div>
+      </section>
+
+      <section id="paradox">
+        <h2>Das KI-Paradox in der Schule</h2>
+        <p>Aus der Forschung und Praxis (vgl. ChatGPT-Studien): KI verspricht Zeitgewinn, kostet aber zunächst Zeit. Erst <strong>strukturierte, wiederkehrende Aufgaben</strong> sparen wirklich Zeit. Lehrende, die nur sporadisch prompten, verlieren Zeit.</p>
+        <div class="callout quote">
+          „In der Theorie beschleunigt KI alles. In der Praxis sitzt man dann doch manchmal 30 Minuten an einem Prompt, obwohl man die Aufgabe in fünf Minuten erledigt hätte."
+        </div>
+        <h3>Wo lohnt sich KI besonders?</h3>
+        <ul>
+          <li>Wiederholte Aufgaben (Differenzierung, Korrekturraster, Eltern-/Schüler:innen-Briefe)</li>
+          <li>Komplexe Projekte mit hoher Variantenzahl</li>
+          <li>Kreative Ideation (Brainstorming, Variantenbildung)</li>
+        </ul>
+        <h3>Wo lohnt sich KI (noch) nicht?</h3>
+        <ul>
+          <li>Einmalige Mini-Aufgaben - bis der Prompt steht, bist du fertig.</li>
+          <li>Emotionale Kommunikation - Haltung lässt sich schwer automatisieren.</li>
+        </ul>
+      </section>
+
+      <section id="szenarien">
+        <h2>Drei Schulszenarien</h2>
+        <div class="two-col">
+          <div class="note-card">
+            <h4>Szenario A: KI-Verbot</h4>
+            <p>Klasse arbeitet weitgehend KI-frei. Vorteil: klare Bewertbarkeit. Nachteil: Lebensrealität wird verleugnet, Schwarzmarkt-Nutzung.</p>
+          </div>
+          <div class="note-card">
+            <h4>Szenario B: KI-Pflicht</h4>
+            <p>Klasse muss KI nutzen. Vorteil: Kompetenzaufbau. Nachteil: Abhängigkeit, Bequemlichkeit, Datenschutzfragen.</p>
+          </div>
+          <div class="note-card">
+            <h4>Szenario C: KI-Kompetenz mit Wahlfreiheit</h4>
+            <p>Klasse lernt verantwortungsvolle Nutzung, entscheidet phasenweise selbst. Bewährt: <strong>transparente Kennzeichnung &amp; Reflexion</strong>.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="lernideen">
+        <h2>Lernideen mit KI</h2>
+
+        <div class="lernideen">
+          <div class="lernideen-header">
+            <h3>💡 Workshop 06 - Lernideen</h3>
+            <p>Chancen und Risiken konkret bearbeiten.</p>
+          </div>
+          <div class="tabs">
+            <button class="tab-btn active" data-target="w6-gs">Lehrende GS<span class="role-tag">Grundschule</span></button>
+            <button class="tab-btn" data-target="w6-s1">Lehrende Sek&nbsp;I<span class="role-tag">Klasse 5-10</span></button>
+            <button class="tab-btn" data-target="w6-s2">Lehrende Sek&nbsp;II<span class="role-tag">Oberstufe</span></button>
+            <button class="tab-btn" data-target="w6-l1">Lernende Sek&nbsp;I<span class="role-tag">Klasse 5-10</span></button>
+            <button class="tab-btn" data-target="w6-l2">Lernende Sek&nbsp;II<span class="role-tag">Oberstufe</span></button>
+          </div>
+          <div class="tab-panels">
+
+            <div class="tab-panel active" data-panel="w6-gs">
+              <div class="idea">
+                <h4>👥 Eltern-Brief mit KI - was ist okay?</h4>
+                <div class="idea-meta">
+                  <span class="badge level-1">Niveau 1</span>
+                  <span class="badge time">⏱ 30 Min</span>
+                  <span class="badge tool">🛠 ChatGPT</span>
+                </div>
+                <div class="prompt-box">
+                  <button class="copy-btn">Kopieren</button>
+                  <span class="prompt-content">Du bist Grundschullehrkraft. Verfasse einen freundlichen Elternbrief (max. 200 Wörter) zur Mitteilung eines Wandertags. Bedingungen:
+- Keine Namen oder personenbezogene Details aufnehmen.
+- Klar erkennbarer Aufbau: Anlass, Termin, Treffpunkt, Bekleidung, Verpflegung, Kontakt.
+- Ton: warmherzig, ohne Floskeln.
+- Markiere am Ende, welche Teile ich vor dem Versand selbst noch anpassen muss.</span>
+                </div>
+                <div class="idea-reflect"><strong>Reflexion:</strong> Welche Stelle wirkt zu glatt - was passt zu meiner Stimme nicht?</div>
+              </div>
+            </div>
+
+            <div class="tab-panel" data-panel="w6-s1">
+              <div class="idea">
+                <h4>🧪 KI-vs-ich-Vergleich (Klassenversuch)</h4>
+                <div class="idea-meta">
+                  <span class="badge level-2">Niveau 2</span>
+                  <span class="badge time">⏱ 90 Min</span>
+                  <span class="badge tool">🛠 ChatGPT + Bewertungsraster</span>
+                </div>
+                <p>Schüler:innen schreiben einen kurzen Text und vergleichen ihn anschließend mit der KI-Version - mit Hilfe von Bewertungsraster 06 (Mit/Ohne KI).</p>
+                <div class="prompt-box">
+                  <button class="copy-btn">Kopieren</button>
+                  <span class="prompt-content">Du bist Co-Lektor:in (Sek I, Klasse 8). Ich gebe dir den Text einer Schüler:in und meine eigene Version desselben Themas. Vergleiche beide Texte nach folgenden Kriterien:
+1) Eigenständigkeit der Argumentation
+2) Wortschatz / Sprache
+3) Strukturklarheit
+4) Originalität.
+Liefere für jedes Kriterium eine Punktzahl (1-5) UND eine kurze Begründung. Verändere keinen der Texte.
+
+Schülertext: [TEXT 1]
+KI-Text: [TEXT 2]</span>
+                </div>
+                <div class="idea-reflect"><strong>Reflexion:</strong> Welche Stärken hat der eigene Text, welche der KI-Text?</div>
+              </div>
+            </div>
+
+            <div class="tab-panel" data-panel="w6-s2">
+              <div class="idea">
+                <h4>📈 Mini-Studie zur KI-Nutzung im Kurs</h4>
+                <div class="idea-meta">
+                  <span class="badge level-3">Niveau 3</span>
+                  <span class="badge time">⏱ 2 Doppelstunden</span>
+                  <span class="badge tool">🛠 ChatGPT + Tabellenkalkulation</span>
+                </div>
+                <div class="prompt-box">
+                  <button class="copy-btn">Kopieren</button>
+                  <span class="prompt-content">Verhalte dich wie ein:e empirische:r Bildungsforscher:in. Hilf mir, eine Mini-Studie im Kurs zu konzipieren: „Wie wirkt KI auf das Schreibverhalten der Lernenden?". Liefere:
+1) Forschungsfrage und drei Hypothesen,
+2) Erhebungsdesign (Pre-Post mit kleiner Gruppe),
+3) Zwei Messinstrumente (z.B. Schreibproben + Selbstbericht),
+4) Ethik-/Datenschutz-Hinweise,
+5) Auswertungsmethoden.
+Markiere am Ende, was die KI in diesem Setting NICHT leisten kann.</span>
+                </div>
+                <div class="idea-reflect"><strong>Reflexion:</strong> Welche Hypothese würdest du wirklich testen wollen?</div>
+              </div>
+            </div>
+
+            <div class="tab-panel" data-panel="w6-l1">
+              <div class="idea">
+                <h4>⚖️ Mein Pro/Contra-Plakat</h4>
+                <div class="idea-meta">
+                  <span class="badge level-2">Lernidee</span>
+                  <span class="badge time">⏱ 45 Min</span>
+                  <span class="badge tool">🛠 ChatGPT (für Stichpunkte)</span>
+                </div>
+                <div class="prompt-box">
+                  <button class="copy-btn">Kopieren</button>
+                  <span class="prompt-content">Hi! Ich bin Schüler:in (Klasse 7) und mache ein Plakat: „KI in der Schule - was bringt's, was nervt?". Bitte gib mir:
+- 5 echte Vorteile aus Schüler:innen-Perspektive,
+- 5 echte Nachteile aus Schüler:innen-Perspektive,
+- 2 typische Mythen, die ich aufdecken könnte.
+Schreibe alle Punkte in einfacher Sprache, max. 12 Wörter pro Punkt.</span>
+                </div>
+                <div class="idea-reflect"><strong>Selbst-Check:</strong> Welcher Punkt ist DEINE Erfahrung?</div>
+              </div>
+            </div>
+
+            <div class="tab-panel" data-panel="w6-l2">
+              <div class="idea">
+                <h4>🧠 Selbstbeobachtung: Wo nutze ich KI als Krücke?</h4>
+                <div class="idea-meta">
+                  <span class="badge level-3">Lernidee</span>
+                  <span class="badge time">⏱ 1 Woche</span>
+                  <span class="badge tool">🛠 Heft + ChatGPT</span>
+                </div>
+                <div class="prompt-box">
+                  <button class="copy-btn">Kopieren</button>
+                  <span class="prompt-content">Verhalte dich wie ein:e ehrliche:r Coach für Lerngewohnheiten (Sek II). Ich gebe dir mein KI-Nutzungstagebuch der letzten Woche. Analysiere:
+1) Welche Nutzung war werkzeughaft (klar definierte Aufgabe)?
+2) Welche Nutzung war krückenhaft (Denken vermieden)?
+3) Welche Konsequenzen hat das für meinen Lernfortschritt?
+4) Welche Mini-Verhaltensänderung empfiehlst du für die nächste Woche?
+
+Tagebuch:
+[EINTRÄGE]</span>
+                </div>
+                <div class="idea-reflect"><strong>Selbst-Check:</strong> Welche Verhaltensänderung beginnt morgen?</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <section id="ressourcen">
+        <h2>Ressourcen</h2>
+        <ul class="resource-list">
+          <li><span class="res-type">📑</span><div><a href="../../Bewertungsraster_Falck/" target="_blank" rel="noopener">Bewertungsraster (Falck)</a><span class="res-meta">u.a. Mit/Ohne-KI-Vergleich (Raster 06)</span></div></li>
+          <li><span class="res-type">🌐</span><div><a href="https://www.goethe.de/ins/it/de/spr/mag/21609464.html" target="_blank" rel="noopener">Goethe-Institut: KI in der Bildung</a><span class="res-meta">Hintergrundartikel</span></div></li>
+          <li>
+            <span class="res-type">🧭</span>
+            <div>
+              <a href="https://www.manuelflick.de/blog/ki-leitfaden" target="_blank" rel="noopener">KI-Leitfaden für den Unterricht</a>
+              <span class="res-meta">manuelflick.de · praxisorientierter Leitfaden zum KI-Einsatz im Unterricht</span>
+            </div>
+          </li>
+          <li>
+            <span class="res-type">🎓</span>
+            <div>
+              <a href="https://www.manuelflick.de/blog/ai-policy-20-ein-leitfaden-fuer-den-ki-einsatz-in-wissenschaftlichen-arbeiten" target="_blank" rel="noopener">AI-Policy 2.0 - KI-Einsatz in wissenschaftlichen Arbeiten</a>
+              <span class="res-meta">manuelflick.de · Regelwerk für GFS, Seminararbeiten und Hausarbeiten</span>
+            </div>
+          </li>
+          <li>
+            <span class="res-type">📝</span>
+            <div>
+              <a href="https://www.manuelflick.de/blog/leitfaden-ki-aufgabenkultur" target="_blank" rel="noopener">Neue Aufgabenkultur mit KI</a>
+              <span class="res-meta">manuelflick.de · Leitfaden für KI-resistente und KI-fördernde Aufgaben</span>
+            </div>
+          </li>
+          <li>
+            <span class="res-type">✅</span>
+            <div>
+              <a href="https://www.manuelflick.de/blog/ki-leitfaden-pruefen-und-bewerten" target="_blank" rel="noopener">Prüfen und Bewerten mit KI</a>
+              <span class="res-meta">manuelflick.de · Leitfaden zu Leistungsbewertung und KI</span>
+            </div>
+          </li>
+          <li>
+            <span class="res-type">🧩</span>
+            <div>
+              <a href="https://www.manuelflick.de/blog/das-3x3-modell-fuer-ki-resilientere-aufgaben" target="_blank" rel="noopener">Das 3×3-Modell für KI-resilientere Aufgaben</a>
+              <span class="res-meta">manuelflick.de · Rahmenmodell zur Gestaltung KI-robuster Aufgaben</span>
+            </div>
+          </li>
+          <li>
+            <span class="res-type">🔄</span>
+            <div>
+              <a href="https://digitalespausenbrot.ch/ki-aufgaben-transformator/" target="_blank" rel="noopener">KI-Aufgaben-Transformator</a>
+              <span class="res-meta">digitalespausenbrot.ch · Online-Werkzeug, das bestehende Aufgaben KI-resilient umformuliert</span>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+    </article>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="copy" style="grid-column:1/-1;">
+      © <span data-year>2026</span> KI-Magie · DigitalEduLab · Michael Fleischer · CC BY-SA 4.0
+    </div>
+  </div>
+</footer>
+
+<script id="ki-magie-inline-js">
+(function () {
+  const navToggle = document.querySelector(".nav-toggle");
+  const mainNav = document.querySelector(".main-nav");
+  if (navToggle && mainNav) {
+    navToggle.addEventListener("click", function () {
+      mainNav.classList.toggle("open");
+    });
+  }
+  const path = window.location.pathname.split("/").pop() || "index.html";
+  document.querySelectorAll(".main-nav a").forEach(function (a) {
+    const href = a.getAttribute("href") || "";
+    const target = href.split("/").pop();
+    if (target === path) a.classList.add("active");
+    if (path === "" && (target === "index.html" || target === "../index.html")) a.classList.add("active");
+  });
+  document.querySelectorAll(".nav-dropdown a.active").forEach(function (link) {
+    const group = link.closest(".nav-group");
+    if (!group) return;
+    const trigger = group.querySelector(".nav-trigger");
+    if (trigger) trigger.classList.add("has-active");
+  });
+  const triggers = document.querySelectorAll(".nav-trigger");
+  triggers.forEach(function (btn) {
+    btn.addEventListener("click", function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      const expanded = btn.getAttribute("aria-expanded") === "true";
+      triggers.forEach(function (other) { other.setAttribute("aria-expanded", "false"); });
+      btn.setAttribute("aria-expanded", expanded ? "false" : "true");
+    });
+  });
+  document.addEventListener("click", function (e) {
+    if (!e.target.closest(".nav-group")) {
+      triggers.forEach(function (btn) { btn.setAttribute("aria-expanded", "false"); });
+    }
+  });
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") {
+      triggers.forEach(function (btn) { btn.setAttribute("aria-expanded", "false"); });
+    }
+  });
+  document.querySelectorAll(".lernideen").forEach(function (root) {
+    const buttons = root.querySelectorAll(".tab-btn");
+    const panels = root.querySelectorAll(".tab-panel");
+    buttons.forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        const target = btn.getAttribute("data-target");
+        buttons.forEach(function (b) { b.classList.remove("active"); });
+        panels.forEach(function (p) { p.classList.remove("active"); });
+        btn.classList.add("active");
+        const panel = root.querySelector('[data-panel="' + target + '"]');
+        if (panel) panel.classList.add("active");
+      });
+    });
+  });
+  document.querySelectorAll(".copy-btn").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      const wrapper = btn.closest(".prompt-box");
+      if (!wrapper) return;
+      const text = wrapper.querySelector(".prompt-content")?.innerText || wrapper.innerText;
+      navigator.clipboard.writeText(text.trim()).then(function () {
+        const original = btn.innerText;
+        btn.innerText = "Kopiert!";
+        btn.classList.add("copied");
+        setTimeout(function () {
+          btn.innerText = original;
+          btn.classList.remove("copied");
+        }, 1500);
+      }).catch(function () {
+        btn.innerText = "Fehler";
+        setTimeout(function () { btn.innerText = "Kopieren"; }, 1500);
+      });
+    });
+  });
+  const tocLinks = document.querySelectorAll(".toc a");
+  if (tocLinks.length > 0) {
+    const sections = Array.from(tocLinks).map(function (l) {
+      const id = l.getAttribute("href");
+      if (!id || !id.startsWith("#")) return null;
+      return document.querySelector(id);
+    }).filter(Boolean);
+    if (sections.length > 0 && "IntersectionObserver" in window) {
+      const observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) {
+            tocLinks.forEach(function (l) { l.classList.remove("active"); });
+            const link = document.querySelector('.toc a[href="#' + e.target.id + '"]');
+            if (link) link.classList.add("active");
+          }
+        });
+      }, { rootMargin: "-30% 0px -60% 0px", threshold: 0 });
+      sections.forEach(function (s) { observer.observe(s); });
+    }
+  }
+  const yearEl = document.querySelector("[data-year]");
+  if (yearEl) yearEl.textContent = String(new Date().getFullYear());
+})();
+</script>
+</body>
+</html>

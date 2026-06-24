@@ -1,0 +1,17 @@
+# GitHub Pages: serve everything as static, do not run Jekyll templating.
+# .nojekyll already disables Jekyll completely - this config is a belt-and-braces
+# fallback in case .nojekyll is not respected by the deployment.
+
+include:
+  - "css"
+  - "js"
+  - "assets"
+  - "pages"
+  - ".nojekyll"
+
+# Do NOT exclude anything - we want everything served as-is.
+exclude: []
+
+# Disable theme to avoid layout injection.
+theme: null
+plugins: []
